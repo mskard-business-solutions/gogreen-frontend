@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const FeatureCards = () => {
   const features = [
@@ -20,26 +23,62 @@ const FeatureCards = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
+      },
+    },
+  };
+
   return (
-    <div className="container-fluid top-feature py-5 pt-lg-0">
-      <div className="container py-5 pt-lg-0">
-        <div className="row gx-0">
+    <div className="w-full py-5">
+      <div className="max-w-7xl mx-auto py-5">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 lg:grid-cols-3 gap-0"
+        >
           {features.map((f, i) => (
-            <div key={i} className="col-lg-4 animate-fadeIn">
-              <div className="bg-white shadow-lg d-flex align-items-center h-100 px-10 py-8 min-h-[180px] hover:-translate-y-2 transition-transform duration-300">
-                <div className="d-flex w-full items-center">
-                  <div className="flex-shrink-0 w-24 h-24 rounded-full bg-light flex items-center justify-center">
+            <motion.div key={i} variants={itemVariants}>
+              <motion.div
+                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
+                transition={{ duration: 0.3 }}
+                className="bg-white shadow-lg flex items-center h-full px-10 py-8 min-h-[180px]"
+              >
+                <div className="flex w-full items-center">
+                  <motion.div
+                    whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex-shrink-0 w-24 h-24 rounded-full bg-light flex items-center justify-center"
+                  >
                     <Image src={f.icon} alt={f.title} width={80} height={80} className="w-16 h-16 object-contain" />
-                  </div>
-                  <div className="ps-6">
+                  </motion.div>
+                  <div className="pl-6">
                     <h4 className="text-primary font-bold mb-2 leading-tight">{f.title}</h4>
                     <span className="text-secondary font-bold text-sm">{f.description}</span>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -1,357 +1,176 @@
 @import "tailwindcss";
 
-/* Root Variables from HTML */
-:root {
-  --primary: #1c9e1c;
-  --accent: #ff9f1c;
-  --dark: #0f172a;
-  --light: #f8fafc;
-}
+/* ========================================
+   TAILWIND V4 THEME CONFIGURATION
+   All custom tokens defined here
+======================================== */
 
 @theme {
+  /* Color Palette */
   --color-primary: #1c9e1c;
+  --color-primary-dark: #178017;
   --color-accent: #ff9f1c;
   --color-dark: #0f172a;
   --color-light: #f8fafc;
+  --color-whitesmoke: #f5f5f5;
+  --color-secondary: #525368;
+  --color-heading: #0F4229;
   
+  /* Typography */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-playfair-display), serif;
-
-  @keyframes dropFall {
-    0% { transform: translateY(-100px) scaleY(1); opacity: 0; }
-    20% { opacity: 1; }
-    60% { transform: translateY(80px) scaleY(1.2); }
-    70% { transform: translateY(110px) scaleY(0.8); }
-    80% { transform: translateY(100px) scaleY(1); }
-    100% { transform: translateY(-100px) scaleY(1); opacity: 0; }
-  }
-
-  @keyframes splashExpand {
-    0%, 60% { width: 0; height: 0; opacity: 0; }
-    70% { width: 30px; height: 8px; opacity: 0.8; }
-    90% { width: 50px; height: 10px; opacity: 0.4; }
-    100% { width: 0; height: 0; opacity: 0; }
-  }
-
-  @keyframes countryGlow {
-    0% { filter: drop-shadow(0 0 20px rgba(28,158,28,0.4)); }
-    50% { filter: drop-shadow(0 0 30px rgba(28,158,28,0.6)); }
-    100% { filter: drop-shadow(0 0 20px rgba(28,158,28,0.4)); }
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(0.8); opacity: 0.6; }
-    50% { transform: scale(1.4); opacity: 0.3; }
-    100% { transform: scale(0.8); opacity: 0.6; }
-  }
 }
 
-/* Global Presence Page Styles */
-body { 
-  font-family: 'Inter', sans-serif; 
-  background: var(--light); 
-  color: #333; 
-  line-height: 1.8; 
-}
+/* ========================================
+   BASE STYLES
+======================================== */
 
-h1, h2 { 
-  font-family: 'Playfair Display', serif; 
-}
-
-/* Hero - Clean & Elegant */
-header {
-  height: 40vh; 
-  min-height: 280px;
-  background: linear-gradient(rgba(28,158,28,0.88), rgba(28,158,28,0.92));
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  text-align: center;
-}
-
-header h1 {
-  font-size: clamp(3.5rem, 8vw, 6rem); 
-  color: white; 
-  margin-bottom: 1rem;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-
-header p { 
-  font-size: 1.5rem; 
-  color: white; 
-  opacity: 0.95; 
-}
-
-/* Section Styling */
-section { 
-  padding: 120px 0; 
-}
-
-.container { 
-  max-width: 1300px; 
-}
-
-h2 {
-  font-size: 3.2rem; 
-  text-align: center; 
-  color: var(--dark); 
-  margin-bottom: 2rem;
-}
-
-.intro-text {
-  text-align: center; 
-  font-size: 1.2rem; 
-  max-width: 900px; 
-  margin: 0 auto 80px;
-  color: #555;
-}
-
-/* Map Card - Beautiful & Decent */
-.map-card {
-  background: white; 
-  border-radius: 24px; 
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-}
-
-.map-card-header {
-  background: linear-gradient(135deg, var(--primary), #178017); 
-  color: white; 
-  padding: 1.5rem;
-}
-
-.map-card-header strong { 
-  font-size: 1.4rem; 
-}
-
-.map-card-controls .btn {
-  background: rgba(255,255,255,0.2); 
-  border: 1px solid rgba(255,255,255,0.3);
-  color: white; 
-  font-size: 0.95rem;
-}
-
-.map-card-controls .btn:hover { 
-  background: white; 
-  color: var(--primary); 
-}
-
-#allSvg { 
-  background: #f0f7f4; 
-}
-
-.allPaths { 
-  fill: #d0e8e0; 
-  stroke: #1c9e1c; 
-  stroke-width: 1.2; 
-  cursor: pointer; 
-  transition: all 0.4s ease; 
-}
-
-.allPaths:hover { 
-  fill: var(--primary); 
-  stroke: var(--accent); 
-}
-
-#name {
-  position: absolute; 
-  background: var(--dark); 
-  color: white;
-  padding: 10px 16px; 
-  border-radius: 12px; 
-  font-size: 1rem; 
-  font-weight: 600;
-  pointer-events: none; 
-  opacity: 0; 
-  transition: opacity 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-  z-index: 1000;
-}
-
-#name::after {
-  content: ''; 
-  position: absolute; 
-  bottom: -8px; 
-  left: 50%; 
-  transform: translateX(-50%);
-  border: 8px solid transparent; 
-  border-top-color: var(--dark);
-}
-
-/* Promise Section - Warm & Trustworthy */
-.promise {
-  background: linear-gradient(135deg, #f0f7f4, #e6f7ee); 
-  text-align: center; 
-  padding: 140px 0;
-  border-radius: 30px; 
-  margin: 100px 5%;
-}
-
-.promise h2 { 
-  color: var(--primary); 
-  margin-bottom: 2rem; 
-}
-
-.promise p { 
-  font-size: 1.5rem; 
-  max-width: 1000px; 
-  margin: 0 auto 2rem; 
-  color: #444; 
-}
-
-.promise strong { 
-  color: var(--primary); 
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  header { 
-    height: 70vh; 
-  }
-  
-  .map-card-header { 
-    text-align: center; 
-  }
-  
-  .map-card-controls { 
-    margin-top: 1rem; 
-  }
-}
-
-/* --- Global Reponsive Base --- */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  width: 100%;
-  overflow-x: hidden;
+  font-family: var(--font-sans);
   background: #ffffff;
-  color: #525368; /* $body-color: $secondary */
-  font-family: var(--font-inter), sans-serif;
+  color: var(--color-secondary);
+  line-height: 1.8;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair-display), sans-serif;
-  color: #0F4229; /* $headings-color: $dark */
-  font-weight: 700; /* $headings-font-weight: 700 */
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  font-weight: 700;
 }
 
-/* --- Search Suggestions Dropdown --- */
-.search-suggestions {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: #fff;
-    border-radius: 0 0 1.5rem 1.5rem;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    border: 1px solid #e0e0e0;
-}
+/* ========================================
+   CUSTOM UTILITY LAYERS
+======================================== */
 
-/* --- Water Droplet Animation --- */
-.droplet {
-  animation: dropFall 2s infinite ease-in;
-  background: linear-gradient(180deg, #a8e6cf 0%, #1e5f84 100%);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-}
+@layer components {
+  /* Button - Primary */
+  .btn-primary-custom {
+    @apply relative overflow-hidden;
+    @apply bg-gradient-to-br from-[#2ecc71] to-[#27ae60];
+    @apply text-white font-bold py-3 px-8 rounded-lg;
+    @apply shadow-lg transition-all duration-300 ease-in-out;
+  }
 
-.splash {
-  animation: splashExpand 2s infinite ease-out;
-}
+  .btn-primary-custom:hover {
+    @apply bg-gradient-to-br from-[#27ae60] to-[#1e8449];
+    @apply shadow-xl -translate-y-1;
+  }
 
-/* --- Buttons with Ripple and Gradients --- */
-.btn-primary-custom {
-  background: linear-gradient(135deg, #2ecc71, #27ae60);
-  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-primary-custom:hover {
-  background: linear-gradient(135deg, #27ae60, #1e8449);
-  box-shadow: 0 6px 18px rgba(39, 174, 96, 0.6);
-  transform: translateY(-2px);
-}
-
-.btn-ripple::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 75%;
-  transform: translate(-50%, -50%);
-  transition: width 0.6s ease, height 0.6s ease, opacity 1s ease;
-  z-index: 0;
-}
-
-.btn-ripple:hover::before {
-  width: 300%;
-  height: 300%;
-  opacity: 0;
-}
-
-/* --- Product Cards --- */
-.product-card {
-    border: 2px solid rgba(0, 128, 0, 0.3);
-    border-radius: 20px;
-    background: #ffffff;
-    transition: all 0.4s ease-in-out;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.08);
-}
-
-.product-card:hover {
-    border-color: #2ecc71;
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 25px rgba(46, 204, 113, 0.45);
-    background: linear-gradient(145deg, #f7fff7, #e8ffe8);
-}
-
-/* --- Watermark --- */
-.watermark::after {
+  .btn-ripple::before {
     content: "";
+    @apply absolute top-1/2 left-1/2 w-0 h-0;
+    @apply -translate-x-1/2 -translate-y-1/2;
+    @apply bg-white/40 rounded-[75%];
+    @apply transition-all duration-700 ease-out;
+    @apply z-0;
+  }
+
+  .btn-ripple:hover::before {
+    @apply w-[300%] h-[300%] opacity-0;
+  }
+
+  /* Navbar */
+  .main-navbar {
+    @apply bg-white shadow-md;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 text-dark hover:text-primary transition-colors duration-200;
+  }
+
+  /* Product Card */
+  .product-card {
+    @apply border-2 border-[rgba(0,128,0,0.3)] rounded-2xl bg-white;
+    @apply shadow-md hover:shadow-2xl;
+    @apply transition-all duration-400 ease-in-out;
+  }
+
+  .product-card:hover {
+    @apply border-[#2ecc71] -translate-y-2;
+    background: linear-gradient(145deg, #f7fff7, #e8ffe8);
+  }
+
+  /* Watermark Background */
+  .watermark::after {
+    content: "";
+    @apply fixed top-0 left-0 w-full h-full -z-10;
+    @apply pointer-events-none opacity-5;
     background: url("/img/vidhi_logo-removebg-preview.png") center center no-repeat;
     background-size: 500px;
-    opacity: 0.05;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
+  }
+
+  /* Carousel Caption */
+  .carousel-caption {
+    @apply absolute inset-0 flex items-center justify-center;
+    background: rgba(15, 66, 41, 0.6);
+  }
+
+  /* Map Styles */
+  .allPaths {
+    @apply transition-all duration-300 cursor-pointer;
+    fill: #d0e8e0;
+    stroke: #1c9e1c;
+    stroke-width: 1.2;
+  }
+
+  .allPaths:hover {
+    fill: #348E38 !important;
+    stroke: var(--color-accent) !important;
+  }
+
+  /* Search Bar */
+  .search-bar-rounded {
+    @apply bg-gray-100 rounded-full shadow-sm;
+  }
+
+  /* Dropdown */
+  .dropdown-item {
+    @apply block px-4 py-2 hover:bg-white transition-colors text-dark;
+  }
 }
 
-/* --- Map styles --- */
-.allPaths {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* ========================================
+   SPECIFIC COMPONENT STYLES
+======================================== */
+
+/* Map tooltip */
+#name {
+  @apply absolute bg-dark text-white px-4 py-2 rounded-xl;
+  @apply font-semibold text-base pointer-events-none opacity-0;
+  @apply transition-opacity duration-300 shadow-2xl z-[1000];
 }
 
-.allPaths:hover {
-  fill: #348E38 !important;
-  stroke-width: 1px !important;
-  cursor: pointer;
-  animation: countryGlow 2s infinite;
+#name::after {
+  content: '';
+  @apply absolute -bottom-2 left-1/2 -translate-x-1/2;
+  border: 8px solid transparent;
+  border-top-color: var(--color-dark);
 }
 
-/* --- Carousel --- */
-.carousel-caption-custom {
-    background: rgba(15, 66, 41, .6);
+/* SVG Map Container */
+#allSvg {
+  @apply bg-green-50;
 }
 
-/* --- Custom List --- */
+/* Search Suggestions */
+.search-suggestions {
+  @apply absolute top-full left-0 right-0 z-[1000];
+  @apply bg-white rounded-b-3xl shadow-xl;
+  @apply border border-gray-200;
+}
+
+/* Custom List Bullets */
+.custom-list li {
+  @apply relative pl-6;
+}
+
 .custom-list li::before {
   content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 2px solid #3b5d50;
-  position: absolute;
-  left: 0;
-  top: 8px;
+  @apply absolute left-0 top-2 w-2 h-2;
+  @apply rounded-full border-2 border-[#3b5d50];
 }
