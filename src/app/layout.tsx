@@ -23,13 +23,22 @@ export const metadata: Metadata = {
 
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 
+// Force dynamic rendering for the root layout
+export const dynamic = 'force-dynamic';
+
 async function getGlobalSettings() {
   try {
     // Determine backend URL - usage of env var or default
     const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/api";
+    
+    // Skip during build if backend is not available
+    if (!process.env.NEXT_PUBLIC_API_URL && process.env.NODE_ENV === 'production') {
+      console.warn('NEXT_PUBLIC_API_URL not set, skipping settings fetch during build');
+      return null;
+    }
+    
     const res = await fetch(`${backendUrl}/settings`, {
-      next: { tags: ["global-settings"] },
-      cache: "force-cache", 
+      cache: "no-store",
     });
     
     if (!res.ok) return null;
@@ -38,7 +47,8 @@ async function getGlobalSettings() {
     const json = await res.json();
     return json.success ? json.data : null;
   } catch (error) {
-    console.error("Failed to fetch global settings:", error);
+    // Silently return null on error - WhatsApp button just won't show
+    console.error('Failed to fetch global settings:', error);
     return null;
   }
 }

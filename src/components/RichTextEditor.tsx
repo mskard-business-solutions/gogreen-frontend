@@ -151,13 +151,14 @@ const MenuBar = ({ editor }: { editor: any }) => {
 
 export default function RichTextEditor({ content, onChange }: RichTextEditorProps) {
   const editor = useEditor({
+    immediatelyRender: false,
     extensions: [
       StarterKit,
       Image,
       Link.configure({
         openOnClick: false,
         HTMLAttributes: {
-          class: 'text-blue-600 font-bold underline',
+          class: 'text-blue-600 underline',
         },
       }),
       Table.configure({
@@ -183,8 +184,22 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
       <MenuBar editor={editor} />
       <EditorContent editor={editor} />
       
-      {/* Global styles for Table borders inside the editor (Tiptap quirk) */}
-      <style jsx global>{`
+      {/* Global styles for lists and tables inside the editor */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .ProseMirror ul,
+        .ProseMirror ol {
+          padding-left: 1.5rem;
+          margin: 0.5rem 0;
+        }
+        .ProseMirror ul {
+          list-style-type: disc;
+        }
+        .ProseMirror ol {
+          list-style-type: decimal;
+        }
+        .ProseMirror li {
+          margin: 0.25rem 0;
+        }
         .ProseMirror table {
           border-collapse: collapse;
           table-layout: fixed;
@@ -214,7 +229,7 @@ export default function RichTextEditor({ content, onChange }: RichTextEditorProp
           background: rgba(200, 200, 255, 0.4);
           pointer-events: none;
         }
-      `}</style>
+      ` }} />
     </div>
   );
 }

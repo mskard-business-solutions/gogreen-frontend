@@ -26,6 +26,7 @@ export default function CategoriesAdmin() {
 
   const { data: categories = [], isLoading: loading, error } = useCategories();
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [uploadingImage, setUploadingImage] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     slug: '',
@@ -54,6 +55,30 @@ export default function CategoriesAdmin() {
     } catch (error) {
       console.error('Error deleting category:', error);
       alert('Failed to delete category');
+    }
+  };
+
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.files || e.target.files.length === 0) return;
+    
+    const file = e.target.files[0];
+    const uploadData = new FormData();
+    uploadData.append('file', file);
+    
+    setUploadingImage(true);
+    try {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+      const res = await axios.post(`${API_URL}/upload`, uploadData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+        withCredentials: true
+      });
+      setFormData(prev => ({ ...prev, image: res.data.url }));
+      alert('Image uploaded successfully!');
+    } catch (error) {
+      console.error('Image upload failed:', error);
+      alert('Failed to upload image');
+    } finally {
+      setUploadingImage(false);
     }
   };
 
@@ -160,13 +185,36 @@ export default function CategoriesAdmin() {
               value={formData.displayOrder}
               onChange={e => setFormData({ ...formData, displayOrder: e.target.value })}
             />
+          </div>
+          <div className="border p-4 rounded bg-gray-50">
+            <label className="block text-sm font-medium text-gray-700 mb-2">Category Image</label>
+            <div className="flex items-center gap-4 mb-2">
+              <input 
+                type="file" 
+                accept="image/jpeg,image/jpg,image/png,image/gif,image/webp"
+                onChange={handleImageUpload}
+                disabled={uploadingImage}
+                className="block w-full text-sm text-gray-500
+                  file:mr-4 file:py-2 file:px-4
+                  file:rounded-full file:border-0
+                  file:text-sm file:font-semibold
+                  file:bg-blue-50 file:text-blue-700
+                  hover:file:bg-blue-100"
+              />
+              {uploadingImage && <span className="text-sm text-gray-500">Uploading...</span>}
+            </div>
             <input
               type="text"
-              placeholder="Image URL"
-              className="border p-2 rounded"
+              placeholder="Or enter image URL directly"
+              className="border p-2 rounded w-full text-sm"
               value={formData.image}
               onChange={e => setFormData({ ...formData, image: e.target.value })}
             />
+            {formData.image && (
+              <div className="mt-2">
+                <img src={formData.image} alt="Preview" className="h-24 w-24 object-cover rounded border" />
+              </div>
+            )}
           </div>
           <textarea
             placeholder="Description (optional)"

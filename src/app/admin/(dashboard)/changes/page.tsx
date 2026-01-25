@@ -146,9 +146,17 @@ export default function ChangesPage() {
                                    <h3 className="text-xs font-semibold text-gray-500 uppercase mb-2">
                                        {selectedChange.action === 'delete' ? 'Data to Delete' : 'New Data'}
                                    </h3>
-                                   <pre className="bg-gray-50 p-3 rounded text-xs overflow-x-auto border border-gray-200 max-h-96">
-                                       {JSON.stringify(selectedChange.changeData, null, 2)}
-                                   </pre>
+                                   <div className="bg-gray-50 p-3 rounded border border-gray-200">
+                                      {selectedChange.changeData.pdfUrl && (
+                                        <div className="mb-2 p-2 bg-blue-50 text-blue-800 text-xs rounded border border-blue-100 flex items-center justify-between">
+                                            <span>📄 PDF Attachment Included</span>
+                                            <a href={selectedChange.changeData.pdfUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900">View PDF</a>
+                                        </div>
+                                      )}
+                                      <pre className="text-xs overflow-x-auto max-h-96">
+                                          {JSON.stringify(selectedChange.changeData, null, 2)}
+                                      </pre>
+                                   </div>
                                </div>
                            </div>
                        </div>

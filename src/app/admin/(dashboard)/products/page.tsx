@@ -30,6 +30,7 @@ interface IProduct {
   images?: string[] | null;
   specifications?: any;
   features?: string[] | null;
+  pdfUrl?: string | null;
   displayOrder?: string | null;
   isActive: boolean;
   isFeatured: boolean;
@@ -49,6 +50,8 @@ export default function ProductsAdmin() {
   const [loading, setLoading] = useState(true);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [filterSubcategoryId, setFilterSubcategoryId] = useState<string>('');
+  const [uploadingPdf, setUploadingPdf] = useState(false);
+  const [uploadingImage, setUploadingImage] = useState(false);
   const [formData, setFormData] = useState({
     categoryId: '',
     subcategoryId: '',
@@ -58,6 +61,7 @@ export default function ProductsAdmin() {
     shortDescription: '',
     price: '',
     images: '',
+    pdfUrl: '',
     features: '',
     displayOrder: '0',
     isFeatured: false
@@ -168,6 +172,7 @@ export default function ProductsAdmin() {
       shortDescription: product.shortDescription || '',
       price: product.price || '',
       images: product.images?.join('\n') || '',
+      pdfUrl: product.pdfUrl || '',
       features: product.features?.join('\n') || '',
       displayOrder: product.displayOrder || '0',
       isFeatured: product.isFeatured
@@ -186,10 +191,71 @@ export default function ProductsAdmin() {
       shortDescription: '',
       price: '',
       images: '',
+      pdfUrl: '',
       features: '',
       displayOrder: '0',
       isFeatured: false
     });
+  };
+
+  const handlePdfUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.files || e.target.files.length === 0) return;
+    
+    const file = e.target.files[0];
+    const uploadData = new FormData();
+    uploadData.append('file', file);
+    
+    setUploadingPdf(true);
+    try {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+      const res = await axios.post(`${API_URL}/upload`, uploadData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+        withCredentials: true
+      });
+      setFormData(prev => ({ ...prev, pdfUrl: res.data.url }));
+    } catch (error) {
+      console.error('PDF upload failed:', error);
+      alert('Failed to upload PDF');
+    } finally {
+      setUploadingPdf(false);
+    }
+  };
+
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.files || e.target.files.length === 0) return;
+    
+    const files = Array.from(e.target.files);
+    setUploadingImage(true);
+    
+    try {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+      const uploadedUrls: string[] = [];
+      
+      // Upload each file
+      for (const file of files) {
+        const uploadData = new FormData();
+        uploadData.append('file', file);
+        
+        const res = await axios.post(`${API_URL}/upload`, uploadData, {
+          headers: { 'Content-Type': 'multipart/form-data' },
+          withCredentials: true
+        });
+        
+        uploadedUrls.push(res.data.url);
+      }
+      
+      // Append new URLs to existing ones
+      const currentImages = formData.images ? formData.images.split('\n').filter(url => url.trim()) : [];
+      const allImages = [...currentImages, ...uploadedUrls].join('\n');
+      setFormData(prev => ({ ...prev, images: allImages }));
+      
+      alert(`Successfully uploaded ${uploadedUrls.length} image(s)`);
+    } catch (error) {
+      console.error('Image upload failed:', error);
+      alert('Failed to upload image(s)');
+    } finally {
+      setUploadingImage(false);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -219,6 +285,7 @@ export default function ProductsAdmin() {
         shortDescription: formData.shortDescription || undefined,
         price: formData.price || undefined,
         images: imagesArray.length > 0 ? imagesArray : undefined,
+        pdfUrl: formData.pdfUrl || undefined,
         features: featuresArray.length > 0 ? featuresArray : undefined,
         displayOrder: formData.displayOrder || undefined,
         isFeatured: formData.isFeatured,
@@ -349,13 +416,67 @@ export default function ProductsAdmin() {
             value={formData.description}
             onChange={e => setFormData({ ...formData, description: e.target.value })}
           />
-          <textarea
-            placeholder="Image URLs (one per line)"
-            className="border p-2 rounded w-full"
-            rows={3}
-            value={formData.images}
-            onChange={e => setFormData({ ...formData, images: e.target.value })}
-          />
+          <div className="border p-4 rounded bg-gray-50">
+            <label className="block text-sm font-medium text-gray-700 mb-2">Product Images</label>
+            <div className="flex items-center gap-4 mb-2">
+              <input 
+                type="file" 
+                accept="image/jpeg,image/jpg,image/png,image/gif,image/webp"
+                multiple
+                onChange={handleImageUpload}
+                disabled={uploadingImage}
+                className="block w-full text-sm text-gray-500
+                  file:mr-4 file:py-2 file:px-4
+                  file:rounded-full file:border-0
+                  file:text-sm file:font-semibold
+                  file:bg-blue-50 file:text-blue-700
+                  hover:file:bg-blue-100"
+              />
+              {uploadingImage && <span className="text-sm text-gray-500">Uploading...</span>}
+            </div>
+            <textarea
+              placeholder="Image URLs (one per line, or use upload button above)"
+              className="border p-2 rounded w-full text-sm"
+              rows={3}
+              value={formData.images}
+              onChange={e => setFormData({ ...formData, images: e.target.value })}
+            />
+            {formData.images && (
+              <div className="mt-2 text-sm text-gray-600">
+                <strong>Images:</strong> {formData.images.split('\n').filter(url => url.trim()).length} uploaded
+              </div>
+            )}
+          </div>
+          <div className="border p-4 rounded bg-gray-50">
+             <label className="block text-sm font-medium text-gray-700 mb-2">Product Brochure (PDF)</label>
+             <div className="flex items-center gap-4">
+               <input 
+                 type="file" 
+                 accept="application/pdf"
+                 onChange={handlePdfUpload}
+                 disabled={uploadingPdf}
+                 className="block w-full text-sm text-gray-500
+                   file:mr-4 file:py-2 file:px-4
+                   file:rounded-full file:border-0
+                   file:text-sm file:font-semibold
+                   file:bg-green-50 file:text-green-700
+                   hover:file:bg-green-100"
+               />
+               {uploadingPdf && <span className="text-sm text-gray-500">Uploading...</span>}
+             </div>
+             <input
+               type="text"
+               placeholder="Or enter PDF URL directly"
+               className="border p-2 rounded w-full mt-2 text-sm"
+               value={formData.pdfUrl}
+               onChange={e => setFormData({ ...formData, pdfUrl: e.target.value })}
+             />
+             {formData.pdfUrl && (
+               <a href={formData.pdfUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm mt-1 inline-block hover:underline">
+                 View Current PDF
+               </a>
+             )}
+          </div>
           <textarea
             placeholder="Features (one per line)"
             className="border p-2 rounded w-full"

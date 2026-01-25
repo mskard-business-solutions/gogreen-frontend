@@ -4,20 +4,64 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
-const blogs = [
-  { title: "The Future of Drip Irrigation", img: "https://images.unsplash.com/photo-1602526218489-dc8b0d3f28b2?auto=format&fit=crop&w=800&q=80" },
-  { title: "Soil Health: The Foundation of Farming", img: "https://images.unsplash.com/photo-1524594081293-190a2fe0baae?auto=format&fit=crop&w=800&q=80" },
-  { title: "Precision Agriculture: Smart Farming Revolution", img: "https://images.unsplash.com/photo-1516912481808-3406841bd33c?auto=format&fit=crop&w=800&q=80" },
-  { title: "Organic Fertilizers and Their Impact", img: "https://images.unsplash.com/photo-1607877460814-340dca82bdb3?auto=format&fit=crop&w=800&q=80" },
-  { title: "Sustainable Water Use in Agriculture", img: "https://images.unsplash.com/photo-1587574293340-e63f58e8b1f3?auto=format&fit=crop&w=800&q=80" },
-  { title: "Greenhouse Farming Techniques", img: "https://images.unsplash.com/photo-1600271886991-7a8db8d4bb45?auto=format&fit=crop&w=800&q=80" },
-  { title: "Benefits of Crop Rotation", img: "https://images.unsplash.com/photo-1616627782325-c8f4e16e8e1a?auto=format&fit=crop&w=800&q=80" },
-  { title: "How IoT Is Changing Agriculture", img: "https://images.unsplash.com/photo-1518733057094-95b53151d6d6?auto=format&fit=crop&w=800&q=80" },
-  { title: "Eco-Friendly Pest Management", img: "https://images.unsplash.com/photo-1589739909474-6ccdfc2283d9?auto=format&fit=crop&w=800&q=80" },
-  { title: "Smart Water Sensors in Fields", img: "https://images.unsplash.com/photo-1602526432604-029a709d99d9?auto=format&fit=crop&w=800&q=80" },
-];
+// Disable caching to see new posts
+export const dynamic = 'force-dynamic';
 
-const BlogPage = () => {
+interface Post {
+  id: number;
+  title: string;
+  slug: string;
+  content: any;
+  published: boolean;
+  publishedAt: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// Fetch published blog posts from backend
+async function getPosts(): Promise<Post[]> {
+  try {
+    const res = await fetch('http://localhost:3001/api/posts?public=true', {
+      cache: 'no-store',
+    });
+    
+    if (!res.ok) {
+      console.error('Failed to fetch posts');
+      return [];
+    }
+    
+    return res.json();
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+    return [];
+  }
+}
+
+// Helper function to extract text from Tiptap JSON content
+function extractTextFromContent(content: any): string {
+  if (!content || !content.content) return 'No preview available';
+  
+  let text = '';
+  const traverse = (node: any) => {
+    if (node.type === 'text') {
+      text += node.text + ' ';
+    }
+    if (node.content) {
+      node.content.forEach(traverse);
+    }
+  };
+  
+  traverse(content);
+  const preview = text.trim();
+  return preview.length > 150 ? preview.slice(0, 150) + '...' : preview;
+}
+
+// Default placeholder image
+const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1602526218489-dc8b0d3f28b2?auto=format&fit=crop&w=800&q=80";
+
+const BlogPage = async () => {
+  const posts = await getPosts();
+  
   return (
     <main className="min-h-screen bg-[#f6fff7]">
       <Navbar />
@@ -43,29 +87,44 @@ const BlogPage = () => {
             <h2 className="text-4xl lg:text-5xl font-bold text-[#145a32] font-heading">Latest Blogs & Articles</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {blogs.map((blog, i) => (
-              <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
-                <div className="relative h-64 w-full overflow-hidden">
-                  <Image
-                    src={blog.img}
-                    alt={blog.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
+          {posts.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-gray-600 text-xl">No blog posts published yet. Check back soon!</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {posts.map((post) => (
+                <div key={post.id} className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+                  <div className="relative h-64 w-full overflow-hidden">
+                    <Image
+                      src={DEFAULT_IMAGE}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-[#145a32] mb-4 group-hover:text-success transition-colors">{post.title}</h3>
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {extractTextFromContent(post.content)}
+                    </p>
+                    {post.publishedAt && (
+                      <p className="text-sm text-gray-500 mb-4">
+                        Published on {new Date(post.publishedAt).toLocaleDateString('en-US', { 
+                          year: 'numeric', 
+                          month: 'long', 
+                          day: 'numeric' 
+                        })}
+                      </p>
+                    )}
+                    <Link href={`/blog/${post.slug}`} className="inline-block bg-success text-white px-8 py-3 rounded-full font-bold hover:bg-[#145a32] transition-colors shadow-md">
+                      Read More
+                    </Link>
+                  </div>
                 </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-[#145a32] mb-4 group-hover:text-success transition-colors">{blog.title}</h3>
-                  <p className="text-gray-600 mb-8 line-clamp-3">
-                    Explore in-depth how Vidhi Enterprises is transforming agriculture with innovation and sustainability. Our latest insights cover drip irrigation, soil health, and more.
-                  </p>
-                  <Link href="#" className="inline-block bg-success text-white px-8 py-3 rounded-full font-bold hover:bg-[#145a32] transition-colors shadow-md">
-                    Read More
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

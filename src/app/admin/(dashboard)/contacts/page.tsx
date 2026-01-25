@@ -97,21 +97,23 @@ export default function ContactsAdmin() {
                     {contact.status}
                   </span>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                  {contact.status === 'new' && (
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                  <div className="flex gap-2">
+                    {contact.status === 'new' && (
+                      <button
+                        onClick={() => handleStatusChange(contact._id, 'read')}
+                        className="text-indigo-600 hover:text-indigo-900"
+                      >
+                        Mark as Read
+                      </button>
+                    )}
                     <button
-                      onClick={() => handleStatusChange(contact._id, 'read')}
-                      className="text-indigo-600 hover:text-indigo-900"
+                      onClick={() => handleDelete(contact._id)}
+                      className="text-red-600 hover:text-red-900"
                     >
-                      Mark as Read
+                      Delete
                     </button>
-                  )}
-                  <button
-                    onClick={() => handleDelete(contact._id)}
-                    className="text-red-600 hover:text-red-900"
-                  >
-                    Delete
-                  </button>
+                  </div>
                 </td>
               </tr>
             ))}

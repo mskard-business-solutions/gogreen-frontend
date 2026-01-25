@@ -21,6 +21,7 @@ const Sidebar = () => {
     { label: 'Categories', href: '/admin/categories' },
     { label: 'Subcategories', href: '/admin/subcategories' },
     { label: 'Products', href: '/admin/products' },
+    { label: 'Blog Posts', href: '/admin/posts' },
     { label: 'Contacts', href: '/admin/contacts' },
   ];
 

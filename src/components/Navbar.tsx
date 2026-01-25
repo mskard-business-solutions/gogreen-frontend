@@ -224,16 +224,14 @@ const Navbar = () => {
                     categories.map((cat) => (
                       <Link key={cat._id} href={`/${cat.slug}`} className="dropdown-item"><b>{cat.name}</b></Link>
                     ))
-                  ) : (
-                    <>
-                      <Link key="dripirri" href="/dripirri" className="dropdown-item"><b>Drip Irrigation</b></Link>
-                      <Link key="sprinkler" href="/sprinkler" className="dropdown-item"><b>Sprinkler Irrigation</b></Link>
-                      <Link key="rainsprinkler" href="/rainsprinkler" className="dropdown-item"><b>Rain Sprinkler</b></Link>
-                      <Link key="landscape" href="/landscape" className="dropdown-item"><b>Landscape Irrigation</b></Link>
-                      <Link key="economical" href="/economical" className="dropdown-item"><b>Economical Irrigation</b></Link>
+                  ) : [
+                      <Link key="dripirri" href="/dripirri" className="dropdown-item"><b>Drip Irrigation</b></Link>,
+                      <Link key="sprinkler" href="/sprinkler" className="dropdown-item"><b>Sprinkler Irrigation</b></Link>,
+                      <Link key="rainsprinkler" href="/rainsprinkler" className="dropdown-item"><b>Rain Sprinkler</b></Link>,
+                      <Link key="landscape" href="/landscape" className="dropdown-item"><b>Landscape Irrigation</b></Link>,
+                      <Link key="economical" href="/economical" className="dropdown-item"><b>Economical Irrigation</b></Link>,
                       <Link key="vidhi-kit" href="/vidhi-kit" className="dropdown-item"><b>Vidhi Kit</b></Link>
-                    </>
-                  )}
+                  ]}
                 </div>
               </div>
 

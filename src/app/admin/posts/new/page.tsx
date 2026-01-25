@@ -9,7 +9,7 @@ export default function CreatePostPage() {
   const router = useRouter();
   const [title, setTitle] = useState('');
   const [slug, setSlug] = useState('');
-  const [content, setContent] = useState<any>({});
+  const [content, setContent] = useState<any>({ type: 'doc', content: [] });
   const [isPublishing, setIsPublishing] = useState(false);
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,12 +24,10 @@ export default function CreatePostPage() {
     setIsPublishing(true);
 
     try {
-      // Hardcoded backend URL for now
-      const res = await fetch('http://localhost:3001/api/posts', {
+      const res = await fetch('/api/admin/posts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // 'Authorization': `Bearer ${token}` // needed if auth is fully integrated
         },
         body: JSON.stringify({
           title,
@@ -47,7 +45,7 @@ export default function CreatePostPage() {
 
       const data = await res.json();
       alert('Post created successfully!');
-      router.push(`/blog/${data.slug}`); // Redirect to view
+      router.push(`/blog/${data.slug}`);
     } catch (error) {
       console.error(error);
       alert('Failed to create post');

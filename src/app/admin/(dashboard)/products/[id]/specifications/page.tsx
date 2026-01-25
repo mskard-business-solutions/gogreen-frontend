@@ -192,6 +192,29 @@ export default function ProductSpecificationsPage() {
     }
   };
 
+  const editSpecification = (spec: ProductSpecification) => {
+    setEditingId(spec.id);
+    setTitle(spec.title);
+    setType(spec.type);
+    setDisplayOrder(spec.displayOrder || '0');
+    setTableData(spec.content as TableData);
+    
+    // Set dimensions based on content
+    if (spec.content && typeof spec.content === 'object') {
+      const content = spec.content as TableData;
+      if (content.headers && content.headers.length > 0) {
+        setHeaderRows(content.headers.length);
+        setHeaderCols(content.headers[0].length);
+      }
+      if (content.rows && content.rows.length > 0) {
+        setBodyRows(content.rows.length);
+        setBodyCols(content.rows[0].length);
+      }
+    }
+    
+    setShowForm(true);
+  };
+
   if (loading) {
     return <div className="flex justify-center items-center min-h-screen">Loading...</div>;
   }
@@ -329,19 +352,50 @@ export default function ProductSpecificationsPage() {
                     <div className="mb-4">
                       <h4 className="font-semibold mb-2">Headers</h4>
                       {tableData.headers.map((row, rowIdx) => (
-                        <div key={rowIdx} className="flex gap-2 mb-2">
-                          {row.map((cell, colIdx) => (
-                            <input
-                              key={cell.id}
-                              type="text"
-                              value={cell.value as string}
-                              onChange={(e) =>
-                                updateCell('headers', rowIdx, colIdx, 'value', e.target.value)
-                              }
-                              placeholder={`H${rowIdx + 1}-${colIdx + 1}`}
-                              className="px-2 py-1 border rounded text-sm"
-                            />
-                          ))}
+                        <div key={rowIdx} className="mb-4">
+                          <div className="flex gap-2 mb-2">
+                            {row.map((cell, colIdx) => (
+                              <div key={cell.id} className="flex flex-col gap-1">
+                                <input
+                                  type="text"
+                                  value={cell.value as string}
+                                  onChange={(e) =>
+                                    updateCell('headers', rowIdx, colIdx, 'value', e.target.value)
+                                  }
+                                  placeholder={`H${rowIdx + 1}-${colIdx + 1}`}
+                                  className="px-2 py-1 border rounded text-sm"
+                                />
+                                {type === 'matrix' && (
+                                  <div className="flex gap-1">
+                                    <input
+                                      type="number"
+                                      min="1"
+                                      max="10"
+                                      value={cell.colSpan || 1}
+                                      onChange={(e) =>
+                                        updateCell('headers', rowIdx, colIdx, 'colSpan', parseInt(e.target.value))
+                                      }
+                                      placeholder="colspan"
+                                      className="w-16 px-1 py-0.5 border rounded text-xs"
+                                      title="Column Span"
+                                    />
+                                    <input
+                                      type="number"
+                                      min="1"
+                                      max="10"
+                                      value={cell.rowSpan || 1}
+                                      onChange={(e) =>
+                                        updateCell('headers', rowIdx, colIdx, 'rowSpan', parseInt(e.target.value))
+                                      }
+                                      placeholder="rowspan"
+                                      className="w-16 px-1 py-0.5 border rounded text-xs"
+                                      title="Row Span"
+                                    />
+                                  </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -349,19 +403,50 @@ export default function ProductSpecificationsPage() {
                     <div>
                       <h4 className="font-semibold mb-2">Body Rows</h4>
                       {tableData.rows.map((row, rowIdx) => (
-                        <div key={rowIdx} className="flex gap-2 mb-2">
-                          {row.map((cell, colIdx) => (
-                            <input
-                              key={cell.id}
-                              type="text"
-                              value={cell.value as string}
-                              onChange={(e) =>
-                                updateCell('rows', rowIdx, colIdx, 'value', e.target.value)
-                              }
-                              placeholder={`R${rowIdx + 1}-${colIdx + 1}`}
-                              className="px-2 py-1 border rounded text-sm"
-                            />
-                          ))}
+                        <div key={rowIdx} className="mb-4">
+                          <div className="flex gap-2 mb-2">
+                            {row.map((cell, colIdx) => (
+                              <div key={cell.id} className="flex flex-col gap-1">
+                                <input
+                                  type="text"
+                                  value={cell.value as string}
+                                  onChange={(e) =>
+                                    updateCell('rows', rowIdx, colIdx, 'value', e.target.value)
+                                  }
+                                  placeholder={`R${rowIdx + 1}-${colIdx + 1}`}
+                                  className="px-2 py-1 border rounded text-sm"
+                                />
+                                {type === 'matrix' && (
+                                  <div className="flex gap-1">
+                                    <input
+                                      type="number"
+                                      min="1"
+                                      max="10"
+                                      value={cell.colSpan || 1}
+                                      onChange={(e) =>
+                                        updateCell('rows', rowIdx, colIdx, 'colSpan', parseInt(e.target.value))
+                                      }
+                                      placeholder="colspan"
+                                      className="w-16 px-1 py-0.5 border rounded text-xs"
+                                      title="Column Span"
+                                    />
+                                    <input
+                                      type="number"
+                                      min="1"
+                                      max="10"
+                                      value={cell.rowSpan || 1}
+                                      onChange={(e) =>
+                                        updateCell('rows', rowIdx, colIdx, 'rowSpan', parseInt(e.target.value))
+                                      }
+                                      placeholder="rowspan"
+                                      className="w-16 px-1 py-0.5 border rounded text-xs"
+                                      title="Row Span"
+                                    />
+                                  </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -412,14 +497,23 @@ export default function ProductSpecificationsPage() {
                     {spec.isActive ? 'Active' : 'Inactive'}
                   </span>
                   <button
+                    type="button"
+                    onClick={() => editSpecification(spec)}
+                    className="text-blue-600 hover:text-blue-800 px-3 font-medium"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
                     onClick={() => toggleStatus(spec.id)}
-                    className="text-yellow-600 hover:text-yellow-800 px-3"
+                    className="text-yellow-600 hover:text-yellow-800 px-3 font-medium"
                   >
                     Toggle
                   </button>
                   <button
+                    type="button"
                     onClick={() => deleteSpecification(spec.id)}
-                    className="text-red-600 hover:text-red-800 px-3"
+                    className="text-red-600 hover:text-red-800 px-3 font-medium"
                   >
                     Delete
                   </button>
