@@ -39,7 +39,7 @@ const Footer = () => {
         >
           <motion.div variants={itemVariants} className="space-y-6">
             <Image 
-              src="/img/vidhi_logo-removebg-preview.png" 
+              src="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png" 
               alt="Logo" 
               width={150}
               height={60}
