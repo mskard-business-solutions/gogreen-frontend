@@ -17,7 +17,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Australia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Australia.png"
   },
   "bahrain": {
     "title": "Bhutan",
@@ -26,7 +26,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Bahrain.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Bahrain.png"
   },
   "bangladesh": {
     "title": "Bhutan",
@@ -35,7 +35,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Bangladesh.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Bangladesh.png"
   },
   "bhutan": {
     "title": "Bhutan",
@@ -44,7 +44,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Bhutan.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Bhutan.png"
   },
   "bolivia": {
     "title": "Bhutan",
@@ -53,7 +53,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Bolivia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Bolivia.png"
   },
   "botswana": {
     "title": "Botswana",
@@ -62,7 +62,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Botswana.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Botswana.png"
   },
   "brazil": {
     "title": "Brazil",
@@ -71,7 +71,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Brazil.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Brazil.png"
   },
   "burundi": {
     "title": "Brazil",
@@ -80,7 +80,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Burundi.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Burundi.png"
   },
   "cameroon": {
     "title": "Cameroon",
@@ -89,7 +89,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Cameroon.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Cameroon.png"
   },
   "chile": {
     "title": "Chile",
@@ -98,7 +98,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Chile.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Chile.png"
   },
   "cote-divoire": {
     "title": "Côte d'Ivoire",
@@ -107,7 +107,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Cote-dIvoire.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Cote-dIvoire.png"
   },
   "egypt": {
     "title": "Egypt",
@@ -116,7 +116,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Egypt.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Egypt.png"
   },
   "ethiopia": {
     "title": "Ethiopia",
@@ -125,7 +125,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Ethiopia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Ethiopia.png"
   },
   "gabon": {
     "title": "Gabon",
@@ -134,7 +134,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Gabon.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Gabon.png"
   },
   "gambia": {
     "title": "The Gambia",
@@ -143,7 +143,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Gambia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Gambia.png"
   },
   "georgia": {
     "title": "Georgia",
@@ -152,7 +152,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Georgia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Georgia.png"
   },
   "ghana": {
     "title": "Ghana",
@@ -161,7 +161,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Ghana.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Ghana.png"
   },
   "guadeloupe": {
     "title": "Guadeloupe",
@@ -170,7 +170,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Guadeloupe.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Guadeloupe.png"
   },
   "guatemala": {
     "title": "Guatemala",
@@ -179,7 +179,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Guatemala.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Guatemala.png"
   },
   "guinea": {
     "title": "Guinea",
@@ -188,7 +188,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Guinea.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Guinea.png"
   },
   "indonesia": {
     "title": "Indonesia",
@@ -197,7 +197,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Indonesia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Indonesia.png"
   },
   "iran": {
     "title": "Iran",
@@ -206,7 +206,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Iran.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Iran.png"
   },
   "iraq": {
     "title": "Iraq",
@@ -215,7 +215,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Iraq.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Iraq.png"
   },
   "kenya": {
     "title": "Kenya",
@@ -224,7 +224,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Kenya.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Kenya.png"
   },
   "kuwait": {
     "title": "Kuwait",
@@ -233,7 +233,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Kuwait.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Kuwait.png"
   },
   "lebanon": {
     "title": "Lebanon",
@@ -242,7 +242,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Lebanon.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Lebanon.png"
   },
   "malawi": {
     "title": "Maldives",
@@ -251,7 +251,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Malawi.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Malawi.png"
   },
   "maldives": {
     "title": "Maldives",
@@ -260,7 +260,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Maldives.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Maldives.png"
   },
   "mexico": {
     "title": "Mexico",
@@ -269,7 +269,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Mexico.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Mexico.png"
   },
   "mongolia": {
     "title": "Mongolia",
@@ -278,7 +278,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Mongolia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Mongolia.png"
   },
   "morocco": {
     "title": "Morocco",
@@ -287,7 +287,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Morocco.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Morocco.png"
   },
   "mozambique": {
     "title": "Myanmar",
@@ -296,7 +296,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Mozambique.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Mozambique.png"
   },
   "myanmar": {
     "title": "Myanmar",
@@ -305,7 +305,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Myanmar.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Myanmar.png"
   },
   "namibia": {
     "title": "Myanmar",
@@ -314,7 +314,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Namibia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Namibia.png"
   },
   "nepal": {
     "title": "Nepal",
@@ -323,7 +323,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Nepal.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Nepal.png"
   },
   "netherlands": {
     "title": "Netherlands",
@@ -332,7 +332,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Netherlands.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Netherlands.png"
   },
   "new-zealand": {
     "title": "New Zealand",
@@ -341,7 +341,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/NewZealand.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/NewZealand.png"
   },
   "niger": {
     "title": "Niger",
@@ -350,7 +350,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Niger.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Niger.png"
   },
   "nigeria": {
     "title": "Nigeria",
@@ -359,7 +359,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Nigeria.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Nigeria.png"
   },
   "oman": {
     "title": "Oman",
@@ -368,7 +368,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Oman.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Oman.png"
   },
   "peru": {
     "title": "Peru",
@@ -377,7 +377,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Peru.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Peru.png"
   },
   "philippines": {
     "title": "Philippines",
@@ -386,7 +386,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Philippines.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Philippines.png"
   },
   "qatar": {
     "title": "Qatar",
@@ -395,7 +395,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Qatar.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Qatar.png"
   },
   "rwanda": {
     "title": "Rwanda",
@@ -404,7 +404,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Rwanda.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rwanda.png"
   },
   "saudi-arabia": {
     "title": "Saudi Arabia",
@@ -413,7 +413,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Saudi-Arabia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Saudi-Arabia.png"
   },
   "senegal": {
     "title": "Senegal",
@@ -422,7 +422,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Senegal.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Senegal.png"
   },
   "seychelles": {
     "title": "Seychelles",
@@ -431,7 +431,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Seychelles.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Seychelles.png"
   },
   "somalia": {
     "title": "Somalia",
@@ -440,7 +440,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Somalia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Somalia.png"
   },
   "south-africa": {
     "title": "South Africa",
@@ -449,7 +449,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/South-Africa.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/South-Africa.png"
   },
   "sri-lanka": {
     "title": "Sri Lanka",
@@ -458,7 +458,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Sri Lanka.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Sri Lanka.png"
   },
   "sudan": {
     "title": "Sudan",
@@ -467,7 +467,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Sudan.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Sudan.png"
   },
   "tanzania": {
     "title": "Tanzania",
@@ -476,7 +476,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Tanzania.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Tanzania.png"
   },
   "thailand": {
     "title": "Thailand",
@@ -485,7 +485,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Thailand.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Thailand.png"
   },
   "uae": {
     "title": "United Arab Emirates",
@@ -494,7 +494,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/UAE.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/UAE.png"
   },
   "uganda": {
     "title": "Uganda",
@@ -503,7 +503,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Uganda.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Uganda.png"
   },
   "united-states": {
     "title": "United States",
@@ -512,7 +512,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/United States.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/UnitedStates.png"
   },
   "viet-nam": {
     "title": "Vietnam",
@@ -521,7 +521,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Vietnam.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Vietnam.png"
   },
   "yemen": {
     "title": "Yemen",
@@ -530,7 +530,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Yemen.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Yemen.png"
   },
   "zambia": {
     "title": "Zambia",
@@ -539,7 +539,7 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Zambia.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Zambia.png"
   },
   "zimbabwe": {
     "title": "Zimbabwe",
@@ -548,6 +548,6 @@ export const countryData: Record<string, CountryData> = {
     "productsSupplied": [],
     "industriesServed": [],
     "whyChoose": [],
-    "flagImage": "/img/Zimbabwe.png"
+    "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Zimbabwe.png"
   }
 };

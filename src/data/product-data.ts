@@ -20,8 +20,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/drip-head-15.png",
-    "productImage": "/img/Drip-18.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-15.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-18.jpg",
     "features": [
       "Equipped with a specially designed Anti-Drip device that instantly prevents water dripping after each irrigation cycle.",
       "Operates automatically when pressure exceeds 1.5 kg/cm².",
@@ -37,10 +37,10 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for cooling and humidifying greenhouses and rooting tables, creating optimal conditions for plant propagation and seed germination.Widely used in poultry sheds, cow sheds, and livestock areas for temperature and humidity control.Ensures a uniform microclimate that promotes healthy plant and animal growth.",
       "images": [
-        "/img/drip-table-15.png",
-        "/img/drip-table-16.png",
-        "/img/drip-table-15.png",
-        "/img/drip-table-16.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-15.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-16.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-15.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-16.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -50,8 +50,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/drip-head-9.png",
-    "productImage": "/img/Land-6.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-9.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Land-6.png",
     "features": [
       "Dual-outlet single barb connector designed to divide one dripper/emitter line into two.",
       "Compact, one-piece structure ensuring leak-free performance.",
@@ -67,7 +67,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Widely used in home gardens, polyhouses, greenhouses, and nurseries to extend two outlets from a single dripper/emitter, ensuring balanced and efficient watering across multiple plants.",
       "images": [
-        "/img/Model-36.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-36.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -77,8 +77,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/land-head-5.png",
-    "productImage": "/img/Land-6.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-5.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Land-6.png",
     "features": [
       "Dual-outlet single barb connector designed to divide one dripper/emitter line into two.",
       "Compact, one-piece structure ensuring leak-free performance.",
@@ -94,7 +94,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Widely used in home gardens, polyhouses, greenhouses, and nurseries to extend two outlets from a single dripper/emitter, ensuring balanced and efficient watering across multiple plants.",
       "images": [
-        "/img/Model-36.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-36.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -104,8 +104,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/drip-head-16.png",
-    "productImage": "/img/Drip-19.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-16.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-19.jpg",
     "features": [
       "Specially designed Anti-Drip device prevents water dripping after each irrigation cycle.",
       "Anti-Drip device activates automatically at pressures above 1.5 kg/cm² to start fogger operation.",
@@ -121,10 +121,10 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Designed for efficient cooling and humidification in greenhouses, poultry sheds, cow sheds, and other livestock environments.\nIdeal for irrigation over rooting tables, plant propagation, and seed germination under controlled conditions.\nEnsures uniform fogging and moisture distribution, creating an optimal microclimate for plant and animal growth.",
       "images": [
-        "/img/drip-table-21.png",
-        "/img/drip-table-16.png",
-        "/img/drip-table-21.png",
-        "/img/drip-table-16.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-21.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-16.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-21.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-16.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -134,8 +134,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/drip-head-11.png",
-    "productImage": "/img/Drip-12.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-11.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-12.jpg",
     "features": [
       "Made from high-quality, flexible, and UV-resistant material.",
       "Ensures easy installation and secure connections with drippers and emitters..",
@@ -155,8 +155,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "6 mm SPAGETTY/ DISTRIBUTOR PIPES /",
-    "heroImage": "/img/land-head-8.png",
-    "productImage": "/img/Land-10.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-8.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Land-10.png",
     "features": [
       "Made from high-quality, flexible, and UV-resistant material.",
       "Ensures easy installation and secure connections with drippers and emitters..",
@@ -176,8 +176,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Brown Drip Tubing",
-    "heroImage": "/img/land-head-1.png",
-    "productImage": "/img/Land-1.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-1.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Land-1.png",
     "features": [
       "Laterals serve as the core lifeline of every efficient drip irrigation system.",
       "Crafted from premium 100% virgin raw materials for unmatched durability and performance.",
@@ -192,7 +192,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for row crops, vegetables, horticultural plantations, orchards, vineyards, fruit crops, sugarcane, floriculture, banana, cotton, chillies, and all kinds of close-spaced field crops, as well as greenhouses and landscape irrigation.",
       "images": [
-        "/img/TABLE.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/TABLE.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -202,8 +202,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Filtration",
-    "heroImage": "/img/drip-head-39.png",
-    "productImage": "/img/Spri-25.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-39.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-25.png",
     "features": [
       "Made from high-quality premium 100% virgin Materials  for long life and durability.",
       "Corrosion-resistant and UV-stabilized, suitable for outdoor use.",
@@ -218,8 +218,8 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/drip-table-19.png",
-        "/img/drip-table-20.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-19.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-20.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -229,8 +229,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Filtration",
-    "heroImage": "/img/drip-head-38.png",
-    "productImage": "/img/Spri-23.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-38.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-23.png",
     "features": [
       "Made from high-quality premium 100% virgin Materials  for long life and durability.",
       "Corrosion-resistant and UV-stabilized, suitable for outdoor use.",
@@ -245,8 +245,8 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/drip-table-17.png",
-        "/img/drip-table-18.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-17.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-18.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -256,8 +256,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Adjustable Bubbler With Filter And Take",
-    "heroImage": "/img/drip-head-8.png",
-    "productImage": "/img/Drip-9.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-8.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-9.png",
     "features": [
       "Equipped with a special inlet filter to prevent blockage by sand or silt, ensuring long-term trouble-free operation.",
       "Umbrella pattern flood bubbler design for uniform water distribution.",
@@ -271,7 +271,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Suitable for vegetable crops, fruit orchards, nurseries, and garden plants, ensuring precise irrigation and nutrient delivery. Ideal for uneven terrains and variable soil conditions.",
       "images": [
-        "/img/Model-35.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-35.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -281,8 +281,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/drip-head-7.png",
-    "productImage": "/img/Drip-7.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-7.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-7.jpg",
     "features": [
       "Variable flow rate for different crop requirements.",
       "Made from UV-stabilized 100% virgin raw materials .",
@@ -300,7 +300,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Suitable for vegetable crops, fruit orchards, nurseries, and garden plants, ensuring precise irrigation and nutrient delivery. Ideal for uneven terrains and variable soil conditions.",
       "images": [
-        "/img/Model-34.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-34.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -310,8 +310,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Control Valves & ACC",
-    "heroImage": "/img/drip-head-41.png",
-    "productImage": "/img/Drip-50.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-41.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-50.png",
     "features": [
       "Made from high-quality plastic material ensuring durability and corrosion resistance.",
       "Available in 3/4â€³ and 1â€³ Male BSP/NPT connections for easy installation and compatibility.",
@@ -331,8 +331,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Control Valves & ACC",
-    "heroImage": "/img/drip-head-41.png",
-    "productImage": "/img/Drip-50.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-41.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-50.png",
     "features": [
       "Made from high-quality plastic material ensuring durability and corrosion resistance.",
       "Available in 3/4\" and 1\" Male BSP/NPT connections for easy installation and compatibility.",
@@ -353,8 +353,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Spri-head-3.png",
-    "productImage": "/img/Spri-9.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-head-3.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-9.png",
     "features": [
       "1-1/4â€ Full Circle Metal Sprinkler equipped with three nozzles for wide and efficient coverage",
       "Brass Bearing Assembly ensures smooth rotation and long service life.",
@@ -369,7 +369,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for large-scale agricultural irrigation, plantations, and industrial watering systems. Ensures uniform full-circle water coverage with long-lasting operational reliability.",
       "images": [
-        "/img/metaltable-3n.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/metaltable-3n.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -379,8 +379,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/land-head-7.png",
-    "productImage": "/img/Drip-13.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-7.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-13.jpg",
     "features": [
       "Stops entry of insects, dust, and particles that could block the emitter outlet.",
       "Works as a diffuser to spread water evenly and avoid direct jetting.",
@@ -393,7 +393,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for use in greenhouses, nurseries, and gardens to maintain smooth emitter performance and ensure even water distribution for all plants",
       "images": [
-        "/img/Model-38.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-38.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -403,8 +403,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/drip-head-12.png",
-    "productImage": "/img/Drip-13.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-12.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-13.jpg",
     "features": [
       "Stops entry of insects, dust, and particles that could block the emitter outlet.",
       "Works as a diffuser to spread water evenly and avoid direct jetting.",
@@ -417,7 +417,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for use in greenhouses, nurseries, and gardens to maintain smooth emitter performance and ensure even water distribution for all plants",
       "images": [
-        "/img/Model-38.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-38.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -427,8 +427,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/drip-head-10.png",
-    "productImage": "/img/Drip-11.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-10.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-11.jpg",
     "features": [
       "Ideal for watering planter boxes, pots, hanging baskets, nursery grow bags, and vertical garden trays.",
       "Provides a discharge of 3.5 LPH at 1 Kg/cm² ensuring efficient irrigation.",
@@ -440,7 +440,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Perfect for home gardens, nurseries, and vertical setups to ensure consistent, efficient, and hassle-free watering of plants.",
       "images": [
-        "/img/Model-37.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-37.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -450,8 +450,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Pot Dripper/Arrow Dripper",
-    "heroImage": "/img/land-head-6.png",
-    "productImage": "/img/Drip-11.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-6.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-11.jpg",
     "features": [
       "Ideal for watering planter boxes, pots, hanging baskets, nursery grow bags, and vertical garden trays.",
       "Provides a discharge of 3.5 LPH at 1 Kg/cmÂ² ensuring efficient irrigation.",
@@ -463,7 +463,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Perfect for home gardens, nurseries, and vertical setups to ensure consistent, efficient, and hassle-free watering of plants.",
       "images": [
-        "/img/Model-37.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-37.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -473,8 +473,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "/Inline Drip Tube - PC & NON PC",
-    "heroImage": "/img/drip-head-2.png",
-    "productImage": "/img/Drip-2.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-2.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-2.jpg",
     "features": [
       "Maintains uniform irrigation even on uneven terrain or long lateral lengths.",
       "Made from high-quality UV-resistant raw material for long life under sunlight exposure.",
@@ -489,11 +489,11 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for row crops, vegetables, horticultural plantations, orchards, vineyards, fruit crops, sugarcane, floriculture, banana, cotton, chillies, and all kinds of close-spaced field crops, as well as greenhouses and landscape irrigation.",
       "images": [
-        "/img/drip-table-2.png",
-        "/img/drip-table-3.png",
-        "/img/drip-table-4.png",
-        "/img/drip-table-5.png",
-        "/img/drip-table-6.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-2.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-3.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-4.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-5.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-6.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -503,8 +503,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Control Valves & ACC",
-    "heroImage": "/img/drip-head-42.png",
-    "productImage": "/img/Drip-43.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-42.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-43.png",
     "features": [
       "Made from high-quality Polypropylene (PP) material for excellent strength and long-lasting performance.",
       "Connections available: Threaded (BSP, NPT & BSPT) or Solvent Glued Socket Ends, conforming to ISO, ASTM, BS, and DIN standards.",
@@ -525,8 +525,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Control Valves & ACC",
-    "heroImage": "/img/drip-head-42.png",
-    "productImage": "/img/Drip-43.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-42.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-43.png",
     "features": [
       "Made from high-quality Polypropylene (PP) material for excellent strength and long-lasting performance.",
       "Connections available: Threaded (BSP, NPT & BSPT) or Solvent Glued Socket Ends, conforming to ISO, ASTM, BS, and DIN standards.",
@@ -547,8 +547,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/land-head-9.png",
-    "productImage": "/img/Land-11.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-9.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Land-11.png",
     "features": [
       "Used to connect the dripline with the mainline efficiently.",
       "Made from high-quality, uv-resistant materials for long-lasting performance.",
@@ -562,12 +562,12 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/Model-51.png",
-        "/img/Model-46.png",
-        "/img/Model-47.png",
-        "/img/Model-48.png",
-        "/img/Model-49.png",
-        "/img/Model-50.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-51.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-46.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-47.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-48.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-49.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-50.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -577,8 +577,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Drip Fittings",
-    "heroImage": "/img/drip-head-17.png",
-    "productImage": "/img/Drip-23.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-17.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-23.jpg",
     "features": [
       "Used to connect the dripline with the mainline efficiently.",
       "Made from high-quality, uv-resistant materials for long-lasting performance.",
@@ -593,29 +593,29 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/Model-2.png",
-        "/img/Model-3.png",
-        "/img/Model-10.png",
-        "/img/Model-4.png",
-        "/img/Model-5.png",
-        "/img/Model-6.png",
-        "/img/Model-7.png",
-        "/img/Model-8.png",
-        "/img/Model-9.png",
-        "/img/Model-11.png",
-        "/img/Model-12.png",
-        "/img/Model-13.png",
-        "/img/Model-14.png",
-        "/img/Model-15.png",
-        "/img/Model-16.png",
-        "/img/Model-17.png",
-        "/img/Model-18.png",
-        "/img/Model-19.png",
-        "/img/Model-20.png",
-        "/img/Model-21.png",
-        "/img/Model-22.png",
-        "/img/Model-23.png",
-        "/img/Model-24.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-2.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-3.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-10.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-4.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-5.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-6.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-7.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-8.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-9.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-11.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-12.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-13.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-14.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-15.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-16.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-17.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-18.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-19.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-20.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-21.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-22.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-23.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-24.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -625,8 +625,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Eco Sprinklers",
-    "heroImage": "/img/eco-head-8.png",
-    "productImage": "/img/Eco-21.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-8.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Eco-21.png",
     "features": [
       "Comes with 1/2″ and 3/4″ BSP male threaded inlets for easy installation.",
       "Supports multiple nozzle types, available in various sizes to suit different needs.",
@@ -642,7 +642,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/Model-64.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-64.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -652,8 +652,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Drip Tubing",
-    "heroImage": "/img/drip-head-3.png",
-    "productImage": "/img/Drip-3.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-3.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-3.jpg",
     "features": [
       "Uniform water distribution across all plants.",
       "Designed for efficient irrigation in uneven terrains and long laterals.",
@@ -668,11 +668,11 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for row crops, vegetables, horticultural plantations, orchards, vineyards, fruit crops, sugarcane, floriculture, banana, cotton, chillies, and all kinds of close-spaced field crops, as well as greenhouses and landscape irrigation.",
       "images": [
-        "/img/drip-table-7.png",
-        "/img/drip-table-8.png",
-        "/img/drip-table-9.png",
-        "/img/drip-table-10.png",
-        "/img/drip-table-11.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-7.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-8.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-9.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-10.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-11.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -682,8 +682,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Spri-head-1.png",
-    "productImage": "/img/Spri-1.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-head-1.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-1.png",
     "features": [
       "Â½â€ full circle sprinkler designed for wide and even water coverage.",
       "Equipped with a robust brass bearing assembly for enhanced durability.",
@@ -698,11 +698,11 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for agricultural use, particularly in center pivot systems, crop cooling, and frost protection applications. Designed to ensure uniform water distribution for efficient irrigation.",
       "images": [
-        "/img/full-table-1.png",
-        "/img/full-table-2.png",
-        "/img/full-table-3.png",
-        "/img/full-table-4.png",
-        "/img/full-table-5.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/full-table-1.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/full-table-2.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/full-table-3.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/full-table-4.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/full-table-5.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -712,7 +712,7 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/products",
     "subCategory": "",
-    "heroImage": "/img/Drip-header.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-header.png",
     "productImage": "",
     "features": [],
     "application": {
@@ -726,8 +726,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Inline Drip Tube - PC & NON PC",
-    "heroImage": "/img/land-head-2.png",
-    "productImage": "/img/Land-2.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-2.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Land-2.png",
     "features": [
       "Maintains uniform irrigation even on uneven terrain or long lateral lengths.",
       "Made from high-quality UV-resistant raw material for long life under sunlight exposure.",
@@ -750,8 +750,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Lay Flat Pipes",
-    "heroImage": "/img/eco-head-7.png",
-    "productImage": "/img/Eco-20.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-7.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Eco-20.png",
     "features": [
       "Lightweight design makes it simple to carry and set up anywhere.",
       "Can be moved from one field or plot to another without hassle.",
@@ -772,8 +772,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Drip Tubing & Fittings",
-    "heroImage": "/img/eco-head-1.png",
-    "productImage": "/img/Eco-1.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-1.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Eco-1.png",
     "features": [
       "Designed as a budget-friendly option, these low-thickness plain laterals (ISI Class I) perfectly fulfill farmersâ€™ irrigation needs.",
       "These laterals act as the backbone of any efficient drip irrigation setup.",
@@ -797,8 +797,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/drip-head-14.png",
-    "productImage": "/img/Drip-17.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-14.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-17.png",
     "features": [
       "Constructed from premium virgin engineering material and UV-stabilized for superior durability and longevity.",
       "Designed for precise, low-volume irrigation in horticultural crops, orchards, greenhouses, nurseries, and gardens.",
@@ -813,7 +813,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Perfect for greenhouses, nurseries, fruit orchards, and landscape irrigation used for overhead or under-tree watering, frost protection, and efficient crop cooling.",
       "images": [
-        "/img/Model-40.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-40.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -823,8 +823,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Spri-head-6.png",
-    "productImage": "/img/Spri-18.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-head-6.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-18.png",
     "features": [
       "Made from high-quality material.",
       "Equipped with a plastic bearing assembly for smooth operation.",
@@ -839,13 +839,13 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for irrigation of agricultural crops, gardens, and plantations, ensuring uniform water coverage and efficient use of water resources.",
       "images": [
-        "/img/Model-25.png",
-        "/img/Model-26.png",
-        "/img/Model-27.png",
-        "/img/Model-28.png",
-        "/img/Model-29.png",
-        "/img/Model-30.png",
-        "/img/Model-31.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-25.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-26.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-27.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-28.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-29.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-30.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-31.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -855,8 +855,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/drip-head-13.png",
-    "productImage": "/img/Drip-14.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-13.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-14.png",
     "features": [
       "Manufactured from high-grade virgin engineering material with UV stabilization for extended durability.",
       "Essential component for controlled environment agriculture and precision irrigation systems.",
@@ -871,9 +871,9 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Best suited for greenhouses, nurseries, and shade houses for overhead cooling, humidity control, and uniform misting to enhance plant growth under controlled climatic conditions.",
       "images": [
-        "/img/Model-39.png",
-        "/img/drip-table-14.png",
-        "/img/Model-39.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-39.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-14.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-39.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -883,8 +883,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/drip-head-6.png",
-    "productImage": "/img/Drip-5.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-6.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-5.jpg",
     "features": [
       "Online Emitters (Drippers) are made from virgin Engineering Polymers & UV Stabilised.",
       "Suitable for use with 12 mm, 16 mm & 20 mm Plain Drip Laterals.",
@@ -898,10 +898,10 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for precise irrigation in orchards, vineyards, greenhouses, and landscape areas. Ensures uniform water distribution for vegetables, fruits, and closely spaced crops.",
       "images": [
-        "/img/drip-table-13.png",
-        "/img/Model-33.png",
-        "/img/drip-table-13.png",
-        "/img/Model-33.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-13.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-33.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-13.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-33.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -911,8 +911,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/land-head-3.png",
-    "productImage": "/img/land-3.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-3.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-3.png",
     "features": [
       "Ensures uniform water discharge under varying pressure conditions.",
       "Made from 100% virgin raw materials  for long life.",
@@ -928,8 +928,8 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Suitable for Undulated lands, Hilly regions, Orchard, Tree, Shrubs, Vineyards, Green House Irrigation, Vertical Gardens and Landscape.",
       "images": [
-        "/img/drip-table-12.png",
-        "/img/Model-32.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-12.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-32.png"
       ]
     },
     "pdf": ""
@@ -939,8 +939,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Online Emitters NPC TurboKey Drippers",
-    "heroImage": "/img/land-head-4.png",
-    "productImage": "/img/Drip-5.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-4.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-5.jpg",
     "features": [
       "Online Emitters (Drippers) are made from virgin Engineering Polymers & UV Stabilised.",
       "Suitable for use with 12 mm, 16 mm & 20 mm Plain Drip Laterals.",
@@ -954,8 +954,8 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for precise irrigation in orchards, vineyards, greenhouses, and landscape areas. Ensures uniform water distribution for vegetables, fruits, and closely spaced crops.",
       "images": [
-        "/img/drip-table-13.png",
-        "/img/Model-33.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-13.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-33.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -965,8 +965,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Emitting Devices",
-    "heroImage": "/img/drip-head-5.png",
-    "productImage": "/img/Drip-4.jpg",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-5.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-4.jpg",
     "features": [
       "Ensures uniform water discharge under varying pressure conditions.",
       "Made from 100% virgin raw materials  for long life.",
@@ -982,8 +982,8 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Suitable for Undulated lands, Hilly regions, Orchard, Tree, Shrubs, Vineyards, Green House Irrigation, Vertical Gardens and Landscape.",
       "images": [
-        "/img/drip-table-12.png",
-        "/img/Model-32.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-12.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-32.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -993,8 +993,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Spri-head-2.png",
-    "productImage": "/img/Spri-6.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-head-2.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-6.png",
     "features": [
       "Â¾â€ Part Circle Metal Sprinkler designed for efficient water distribution.",
       "Constructed with high-quality Brass Bearing for durability.",
@@ -1009,9 +1009,9 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for agricultural fields, center pivot systems, solid set installations, and large landscape irrigation areas.",
       "images": [
-        "/img/part-table-1.png",
-        "/img/part-table-2.png",
-        "/img/part-table-3.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/part-table-1.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/part-table-2.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/part-table-3.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1038,8 +1038,8 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for row crops, vegetables, horticultural plantations, orchards, vineyards, fruit crops, sugarcane, floriculture, banana, cotton, chillies, and all kinds of close-spaced field crops, as well as greenhouses and landscape irrigation.",
       "images": [
-        "/img/drip-table-1.png",
-        "/img/drip-table-1.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-1.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/drip-table-1.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1049,8 +1049,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Spri-head-4.png",
-    "productImage": "/img/Spri-11.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-head-4.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-11.png",
     "features": [
       "Â½â€ Full Circle Plastic Sprinkler designed for efficient micro irrigation.",
       "Durable Plastic Bearing Assembly ensures smooth and long-lasting performance.",
@@ -1065,7 +1065,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Specially designed for micro irrigation in crops like potato, onion, garlic, ginger, pulses, tea, and nurseries.",
       "images": [
-        "/img/plastic-table-1.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/plastic-table-1.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1075,8 +1075,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Control Valves & ACC",
-    "heroImage": "/img/drip-head-44.png",
-    "productImage": "/img/Drip-42.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-44.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-42.png",
     "features": [
       "Manufactured from high-quality PVC material, ensuring strength and long service life.",
       "Connections available in Threaded (BSP, NPT & BSPT) or Solvent Glued Socket Ends, conforming to ISO, ASTM, BS, and DIN standards.",
@@ -1097,8 +1097,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Control Valves & ACC",
-    "heroImage": "/img/drip-head-44.png",
-    "productImage": "/img/Drip-42.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-44.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-42.png",
     "features": [
       "Manufactured from high-quality PVC material, ensuring strength and long service life.",
       "Connections available in Threaded (BSP, NPT & BSPT) or Solvent Glued Socket Ends, conforming to ISO, ASTM, BS, and DIN standards.",
@@ -1119,8 +1119,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Control Valves & ACC",
-    "heroImage": "/img/drip-head-43.png",
-    "productImage": "/img/Drip-44.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-43.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-44.png",
     "features": [
       "Available in two models",
       "2â€ BSP Male Threaded Connection",
@@ -1137,8 +1137,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/land-head-10.png",
-    "productImage": "/img/Land-28.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-10.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Land-28.png",
     "features": [
       "Available in two models :-"
     ],
@@ -1153,8 +1153,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/land-head-13.png",
-    "productImage": "/img/Land-31.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-13.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Land-31.png",
     "features": [
       "Solid one-piece brass body with a durable thermoplastic cover ensures long life and reliable field performance.",
       "Available in 3/4\" and 1\" BSP female threaded inlet connections for versatile installation compatibility.",
@@ -1170,9 +1170,9 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/Model-53.png",
-        "/img/Model-54.png",
-        "/img/Model-55.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-53.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-54.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-55.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1182,7 +1182,7 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "#",
     "subCategory": "Get A Free Quote",
-    "heroImage": "/img/Drip-header.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-header.png",
     "productImage": "",
     "features": [],
     "application": {
@@ -1196,8 +1196,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Rain-head-4.png",
-    "productImage": "/img/Rain-4.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rain-head-4.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rain-4.png",
     "features": [
       "1.5\" Part Circle & Full Circle Sprinkler Gun for flexible irrigation coverage.",
       "Durable Brass Bearing Assembly ensures smooth and long-lasting performance.",
@@ -1220,8 +1220,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Rain-head-2.png",
-    "productImage": "/img/Rain-2.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rain-head-2.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rain-2.png",
     "features": [
       "1-1/2â€ Part Circle & Full Circle Sprinkler Gun for flexible irrigation coverage.",
       "Robust Brass/SS Bearing Assembly for long-lasting durability.",
@@ -1236,7 +1236,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for irrigation of field cropslike sugarcane, groundnut, maize, wheat, grams, pulses, and plantations such as tea and coffee.",
       "images": [
-        "/img/rain-table-2.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/rain-table-2.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1246,8 +1246,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/eco-head-6.png",
-    "productImage": "/img/Eco-15.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-6.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Eco-15.png",
     "features": [
       "Helps in linking the sub-main line directly with the rain pipe.",
       "Works together with a grommet to ensure a tight, leak-free connection.",
@@ -1259,7 +1259,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/Model-2.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-2.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1269,8 +1269,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/eco-head-5.png",
-    "productImage": "/img/Eco-14.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-5.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Eco-14.png",
     "features": [
       "Ideal for irrigating leafy greens, short-height crops, and closely planted fields.",
       "Ensures consistent and even water spread across the entire area.",
@@ -1290,8 +1290,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Rain-head-1.png",
-    "productImage": "/img/Rain-1.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rain-head-1.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rain-1.png",
     "features": [
       "1-1/4â€ Part Circle & Full Circle Sprinkler Gun for versatile coverage.",
       "Durable Brass/SS Bearing Assembly ensures long-term performance.",
@@ -1306,7 +1306,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for irrigation of field cropslike sugarcane, groundnut, maize, wheat, grams, pulses, and plantations such as tea and coffee.",
       "images": [
-        "/img/rain-table-1.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/rain-table-1.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1316,8 +1316,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Rain-head-3.png",
-    "productImage": "/img/Rain-3.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rain-head-3.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rain-3.png",
     "features": [
       "2â€ Part Circle & Full Circle Sprinkler Gun for wide-area irrigation coverage.",
       "Heavy-duty Brass/SS Bearing Assembly ensures long service life.",
@@ -1332,7 +1332,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "Ideal for irrigation of field cropslike sugarcane, groundnut, maize, wheat, grams, pulses, and plantations such as tea and coffee.",
       "images": [
-        "/img/rain-table-3.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/rain-table-3.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1342,8 +1342,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Rain-head-2.png",
-    "productImage": "/img/rainstand-2.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rain-head-2.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/rainstand-2.png",
     "features": [
       "Heavy-Duty Construction designed to withstand high pressure and tough field conditions.",
       "Made from top-quality virgin mild steel, ensuring superior strength and durability.",
@@ -1367,8 +1367,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Rain-head-1.png",
-    "productImage": "/img/rainstand-1.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rain-head-1.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/rainstand-1.png",
     "features": [
       "Heavy-Duty Construction ensures strong performance and long operational life in all farming conditions.",
       "Manufactured from top-quality virgin mild steel, offering exceptional strength and stability.",
@@ -1392,8 +1392,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Rain-head-3.png",
-    "productImage": "/img/rainstand-3.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Rain-head-3.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/rainstand-3.png",
     "features": [
       "Heavy-Duty Construction built to handle high pressure and demanding field conditions.",
       "Manufactured from top-quality virgin mild steel, ensuring maximum strength and long-term durability.",
@@ -1417,8 +1417,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Spri-head-7.png",
-    "productImage": "/img/Spri-22.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-head-7.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-22.png",
     "features": [
       "Made from high-quality, UV-stabilized HDPE or PVC material.",
       "Available in various diameters and lengths for flexible use.",
@@ -1444,8 +1444,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Eco Sprinklers",
-    "heroImage": "/img/eco-head-9.png",
-    "productImage": "/img/Eco-22.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-9.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Eco-22.png",
     "features": [
       "Made from high-quality, UV-stabilized raw material.",
       "Available in various diameters and lengths for flexible use.",
@@ -1471,8 +1471,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/land-head-11.png",
-    "productImage": "/img/Land-29.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-11.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Land-29.png",
     "features": [
       "Made from high-quality virgin material for long-lasting durability.",
       "UV stabilized to withstand extreme weather conditions.",
@@ -1495,8 +1495,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/Spri-head-5.png",
-    "productImage": "/img/Spri-15.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-head-5.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-15.png",
     "features": [
       "Made from high-quality virgin material for long-lasting durability.",
       "UV stabilized to withstand extreme weather conditions.",
@@ -1511,11 +1511,11 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/Model-41.png",
-        "/img/Model-42.png",
-        "/img/Model-43.png",
-        "/img/Model-44.png",
-        "/img/Model-45.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-41.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-42.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-43.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-44.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-45.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1525,8 +1525,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Control Valves & ACC",
-    "heroImage": "/img/drip-head-44.png",
-    "productImage": "/img/Drip-42.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-44.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-42.png",
     "features": [
       "Manufactured from high-quality PVC material, ensuring strength and long service life.",
       "Connections available in Threaded (BSP, NPT & BSPT) or Solvent Glued Socket Ends, conforming to ISO, ASTM, BS, and DIN standards.",
@@ -1547,8 +1547,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Control Valves & ACC",
-    "heroImage": "/img/drip-head-44.png",
-    "productImage": "/img/Drip-42.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-44.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Drip-42.png",
     "features": [
       "Manufactured from high-quality PVC material, ensuring strength and long service life.",
       "Connections available in Threaded (BSP, NPT & BSPT) or Solvent Glued Socket Ends, conforming to ISO, ASTM, BS, and DIN standards.",
@@ -1569,8 +1569,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/land-head-12.png",
-    "productImage": "/img/Land-30.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-12.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Land-30.png",
     "features": [
       "Available in two sizes: 1/2\" × 1/2\" × 12\" and 3/4\" × 3/4\" × 12\", both with a 12-inch length.",
       "Designed to operate efficiently under pressures up to 5.5 bar.",
@@ -1585,7 +1585,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/Model-52.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-52.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1595,8 +1595,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Drip Tubing & Fittings",
-    "heroImage": "/img/eco-head-4.png",
-    "productImage": "/img/Eco-3.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-4.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Eco-3.png",
     "features": [
       "Joins two sections of drip tape securely in irrigation systems.",
       "Provides a leak-proof and tight connection",
@@ -1610,17 +1610,17 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/Model-22.png",
-        "/img/Model-23.png",
-        "/img/Model-24.png",
-        "/img/Model-57.png",
-        "/img/Model-2.png",
-        "/img/Model-58.png",
-        "/img/Model-59.png",
-        "/img/Model-60.png",
-        "/img/Model-61.png",
-        "/img/Model-62.png",
-        "/img/Model-21.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-22.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-23.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-24.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-57.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-2.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-58.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-59.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-60.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-61.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-62.png",
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-21.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1630,8 +1630,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Drip Tubing & Fittings",
-    "heroImage": "/img/eco-head-2.png",
-    "productImage": "/img/Eco-24.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-2.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Eco-24.png",
     "features": [
       "Manufactured using premium 100% virgin material to ensure long-lasting performance in the field.",
       "UV-protected construction helps the pipe withstand sunlight exposure and prevents cracking.",
@@ -1655,8 +1655,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Drip Tubing & Fittings",
-    "heroImage": "/img/eco-head-3.png",
-    "productImage": "/img/Eco-2.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/eco-head-3.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Eco-2.png",
     "features": [
       "Produced using 100% pure virgin raw material, ensuring strength, flexibility, and long service life.",
       "Designed with UV shielding properties that protect the tape from sunlight damage and prevent surface cracking.",
@@ -1680,8 +1680,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/land-head-14.png",
-    "productImage": "/img/land-33.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-head-14.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/land-33.png",
     "features": [
       "Lightweight yet heavy-duty plastic construction ensures long-lasting durability.",
       "Provides strong protection for sprinkler system valves in all environments.",
@@ -1696,7 +1696,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/valve-table.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/valve-table.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1706,8 +1706,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "",
-    "heroImage": "/img/drip-head-40.png",
-    "productImage": "/img/Spri-27.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/drip-head-40.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Spri-27.png",
     "features": [
       "Made from premium 100% virgin Materials ensuring durability and long service life.",
       "Corrosion and chemical-resistant, suitable for use with a wide range of fertilizers and chemicals.",
@@ -1723,7 +1723,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/Model-63.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-63.png"
       ]
     },
     "pdf": "AM pdf.pdf"
@@ -1733,8 +1733,8 @@ export const productData: Record<string, ProductData> = {
     "category": "Products",
     "categoryLink": "/index",
     "subCategory": "Vertical Garden Pots / Hanging pot",
-    "heroImage": "/img/vidhikit-header-2.png",
-    "productImage": "/img/dripkit-1.png",
+    "heroImage": "https://d170mw2nhcb1v0.cloudfront.net/img/vidhikit-header-2.png",
+    "productImage": "https://d170mw2nhcb1v0.cloudfront.net/img/dripkit-1.png",
     "features": [
       "Made from premium virgin plastic material, ensuring high durability and long service life.",
       "UV-stabilized construction protects the pots from sun damage and color fading",
@@ -1750,7 +1750,7 @@ export const productData: Record<string, ProductData> = {
     "application": {
       "text": "",
       "images": [
-        "/img/Model-56.png"
+        "https://d170mw2nhcb1v0.cloudfront.net/img/Model-56.png"
       ]
     },
     "pdf": "AM pdf.pdf"

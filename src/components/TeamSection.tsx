@@ -5,17 +5,17 @@ const teamMembers = [
   {
     name: "Late Shri D.K. Jain",
     role: "Founder - The Visionary",
-    img: "/img/dada-ji.png",
+    img: "https://d170mw2nhcb1v0.cloudfront.net/img/dada-ji.png",
   },
   {
     name: "Mr. Vineet Jain",
     role: "Proprietor - Expansion Leader",
-    img: "/img/vineet-jain.png",
+    img: "https://d170mw2nhcb1v0.cloudfront.net/img/vineet-jain.png",
   },
   {
     name: "Mr. Vibhor Jain",
     role: "International Business & Innovation",
-    img: "/img/vibhor-jain.png",
+    img: "https://d170mw2nhcb1v0.cloudfront.net/img/vibhor-jain.png",
   },
 ];
 

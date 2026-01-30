@@ -9,43 +9,43 @@ const products = [
   {
     title: "Drip Irrigation",
     desc: "Save water, grow smarter — drip irrigation delivers every drop with precision.",
-    img: "/img/9.png",
-    icon: "/img/4.png",
+    img: "https://d170mw2nhcb1v0.cloudfront.net/img/9.png",
+    icon: "https://d170mw2nhcb1v0.cloudfront.net/img/4.png",
     link: "/dripirri"
   },
   {
     title: "Sprinkler Irrigation",
     desc: "From corners to center, sprinklers reach everywhere. Healthy fields grow evenly.",
-    img: "/img/10.png",
-    icon: "/img/5.png",
+    img: "https://d170mw2nhcb1v0.cloudfront.net/img/10.png",
+    icon: "https://d170mw2nhcb1v0.cloudfront.net/img/5.png",
     link: "/sprinkler"
   },
   {
     title: "Rain Sprinkler (Rain Gun)",
     desc: "Bigger spray, better yield. Raingun irrigation transforms your field’s productivity.",
-    img: "/img/11.png",
-    icon: "/img/6.png",
+    img: "https://d170mw2nhcb1v0.cloudfront.net/img/11.png",
+    icon: "https://d170mw2nhcb1v0.cloudfront.net/img/6.png",
     link: "/rainsprinkler"
   },
   {
     title: "Landscape Irrigation",
     desc: "Upgrade your outdoors with intelligent irrigation. A greener view, a happier home.",
-    img: "/img/12.png",
-    icon: "/img/7.png",
+    img: "https://d170mw2nhcb1v0.cloudfront.net/img/12.png",
+    icon: "https://d170mw2nhcb1v0.cloudfront.net/img/7.png",
     link: "/landscape"
   },
   {
     title: "Economical Irrigation",
     desc: "Save water, save money, and grow more. Smart irrigation makes every drop count.",
-    img: "/img/13.png",
-    icon: "/img/8.png",
+    img: "https://d170mw2nhcb1v0.cloudfront.net/img/13.png",
+    icon: "https://d170mw2nhcb1v0.cloudfront.net/img/8.png",
     link: "/economical"
   },
   {
     title: "Vidhi Kit",
     desc: "Vidhi Kit — your all-in-one irrigation solution. Simple to install, powerful performance.",
-    img: "/img/14.png",
-    icon: "/img/15.png",
+    img: "https://d170mw2nhcb1v0.cloudfront.net/img/14.png",
+    icon: "https://d170mw2nhcb1v0.cloudfront.net/img/15.png",
     link: "/vidhi-kit"
   }
 ];
@@ -135,8 +135,8 @@ const ProductGrid = () => {
              const mapped = data.data.map((p: any) => ({
                title: p.name,
                desc: p.description || p.shortDescription || "",
-               img: p.images?.[0] || "/img/9.png", // fallback
-               icon: "/img/4.png", // fallback
+               img: p.images?.[0] || "https://d170mw2nhcb1v0.cloudfront.net/img/9.png", // fallback
+               icon: "https://d170mw2nhcb1v0.cloudfront.net/img/4.png", // fallback
                link: `/products/${p.slug}`
              }));
              setResults(mapped);

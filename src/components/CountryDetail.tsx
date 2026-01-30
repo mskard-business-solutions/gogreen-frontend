@@ -12,7 +12,7 @@ const CountryDetail = ({ country, slug }: { country: CountryData; slug: string }
       {/* Fallback image if specific country image not available, or map it */}
       <PageHeader
         title={country.title}
-        backgroundImage="/img/12.png" 
+        backgroundImage="https://d170mw2nhcb1v0.cloudfront.net/img/12.png" 
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Global Presence", href: "/global-presence" },
