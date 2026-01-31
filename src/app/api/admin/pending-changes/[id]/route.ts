@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import axios from 'axios';
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
 export async function POST(
   request: NextRequest,
@@ -19,8 +19,8 @@ export async function POST(
     const { status } = body; // 'approved' or 'rejected'
 
     const endpoint = status === 'approved'
-      ? `${BACKEND_URL}/api/pending-changes/${id}/approve`
-      : `${BACKEND_URL}/api/pending-changes/${id}/reject`;
+      ? `${NEXT_PUBLIC_BASE_URL}/api/pending-changes/${id}/approve`
+      : `${NEXT_PUBLIC_BASE_URL}/api/pending-changes/${id}/reject`;
 
     const response = await axios.post(endpoint, body, {
       headers: {

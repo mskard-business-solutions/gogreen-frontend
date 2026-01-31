@@ -155,8 +155,8 @@ const Footer = () => {
                 <i className="fa fa-map-marker-alt mt-1 mr-4 text-primary"></i>
                 <span>Factory Address: 485-A/7A. Ahinsa Compound, Dilshad Garden Industrial Area, G.T. Road, Shahadra, Delhi – 110095, India</span>
               </motion.li>
-              <motion.li whileHover={{ x: 5 }} className="flex items-center">
-                <i className="fa fa-phone-alt mr-4 text-primary"></i>
+              <motion.li whileHover={{ x: 5 }} className="flex items-start">
+                <i className="fa fa-phone mt-1 mr-4 text-primary"></i>
                 <span>+91-8376007474</span>
               </motion.li>
               <motion.li whileHover={{ x: 5 }} className="flex items-center">

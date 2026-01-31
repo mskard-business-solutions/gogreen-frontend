@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
 export async function PUT(
   request: NextRequest,
@@ -13,7 +13,7 @@ export async function PUT(
     const body = await request.json();
     const { id } = await params;
 
-    const response = await fetch(`${BACKEND_URL}/api/posts/${id}`, {
+    const response = await fetch(`${NEXT_PUBLIC_BASE_URL}/api/posts/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export async function DELETE(
     const token = cookieStore.get('admin_session');
     const { id } = await params;
 
-    const response = await fetch(`${BACKEND_URL}/api/posts/${id}`, {
+    const response = await fetch(`${NEXT_PUBLIC_BASE_URL}/api/posts/${id}`, {
       method: 'DELETE',
       headers: {
         'Cookie': token ? `admin_session=${token.value}` : '',

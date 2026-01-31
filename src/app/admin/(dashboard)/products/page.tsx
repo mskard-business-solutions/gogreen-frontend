@@ -30,6 +30,7 @@ interface IProduct {
   images?: string[] | null;
   specifications?: any;
   features?: string[] | null;
+  seoKeywords?: string[] | null;
   pdfUrl?: string | null;
   displayOrder?: string | null;
   isActive: boolean;
@@ -63,6 +64,7 @@ export default function ProductsAdmin() {
     images: '',
     pdfUrl: '',
     features: '',
+    seoKeywords: '',
     displayOrder: '0',
     isFeatured: false
   });
@@ -174,6 +176,7 @@ export default function ProductsAdmin() {
       images: product.images?.join('\n') || '',
       pdfUrl: product.pdfUrl || '',
       features: product.features?.join('\n') || '',
+      seoKeywords: product.seoKeywords?.join('\n') || '',
       displayOrder: product.displayOrder || '0',
       isFeatured: product.isFeatured
     });
@@ -193,6 +196,7 @@ export default function ProductsAdmin() {
       images: '',
       pdfUrl: '',
       features: '',
+      seoKeywords: '',
       displayOrder: '0',
       isFeatured: false
     });
@@ -207,7 +211,7 @@ export default function ProductsAdmin() {
     
     setUploadingPdf(true);
     try {
-      const API_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:3001'}/api`;
+      const API_URL = `${process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://localhost:3001'}/api`;
       const res = await axios.post(`${API_URL}/upload`, uploadData, {
         headers: { 'Content-Type': 'multipart/form-data' },
         withCredentials: true
@@ -228,7 +232,7 @@ export default function ProductsAdmin() {
     setUploadingImage(true);
     
     try {
-      const API_URL = `${process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:3001'}/api`;
+      const API_URL = `${process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://localhost:3001'}/api`;
       const uploadedUrls: string[] = [];
       
       // Upload each file
@@ -277,6 +281,11 @@ export default function ProductsAdmin() {
         .map(f => f.trim())
         .filter(f => f.length > 0);
 
+      const seoKeywordsArray = formData.seoKeywords
+        .split('\n')
+        .map(k => k.trim())
+        .filter(k => k.length > 0);
+
       const payload = {
         subcategoryId: formData.subcategoryId,
         name: formData.name,
@@ -287,6 +296,7 @@ export default function ProductsAdmin() {
         images: imagesArray.length > 0 ? imagesArray : undefined,
         pdfUrl: formData.pdfUrl || undefined,
         features: featuresArray.length > 0 ? featuresArray : undefined,
+        seoKeywords: seoKeywordsArray.length > 0 ? seoKeywordsArray : undefined,
         displayOrder: formData.displayOrder || undefined,
         isFeatured: formData.isFeatured,
       };
@@ -484,6 +494,17 @@ export default function ProductsAdmin() {
             value={formData.features}
             onChange={e => setFormData({ ...formData, features: e.target.value })}
           />
+          <div className="border p-4 rounded bg-blue-50">
+            <label className="block text-sm font-medium text-gray-700 mb-2">SEO Keywords</label>
+            <textarea
+              placeholder="SEO Keywords (one per line, e.g., drip irrigation, water management, agriculture)"
+              className="border p-2 rounded w-full"
+              rows={4}
+              value={formData.seoKeywords}
+              onChange={e => setFormData({ ...formData, seoKeywords: e.target.value })}
+            />
+            <p className="text-xs text-gray-600 mt-2">Enter one keyword per line. These will be used for search engine optimization.</p>
+          </div>
           <div className="flex gap-2">
             <button 
               type="submit" 

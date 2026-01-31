@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import axios from 'axios';
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
 export async function PATCH(
   request: NextRequest,
@@ -17,7 +17,7 @@ export async function PATCH(
     const { id } = await params;
     const body = await request.json();
 
-    const response = await axios.patch(`${BACKEND_URL}/api/users/${id}/role`, body, {
+    const response = await axios.patch(`${NEXT_PUBLIC_BASE_URL}/api/users/${id}/role`, body, {
       headers: {
         'Cookie': cookieHeader,
       },

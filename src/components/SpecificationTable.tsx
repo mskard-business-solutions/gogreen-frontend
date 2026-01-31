@@ -23,17 +23,17 @@ const renderCellContent = (value: TableCell['value']) => {
 
 export const SpecificationTable: React.FC<Props> = ({ title, data, className = '' }) => {
   return (
-    <div className={`w-full my-6 border border-blue-200 rounded-lg overflow-hidden shadow-sm ${className}`}>
+    <div className={`w-full my-8 rounded-xl overflow-hidden shadow-lg ${className}`}>
       {/* Title Header */}
-      <div className="bg-blue-900 text-white p-4 text-center text-xl font-bold">
+      <div className="bg-white p-4 text-center text-xl font-bold uppercase tracking-wide" style={{ color: '#004AAD' }}>
         {title}
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm text-center border-collapse">
+      <div className="overflow-x-auto border-4 border-gray-400">
+        <table className="w-full text-sm border-collapse">
           {/* Dynamic Header Rendering */}
           {data.headers && data.headers.length > 0 && (
-            <thead className="bg-blue-800 text-white">
+            <thead className="text-white" style={{ backgroundColor: '#004AAD' }}>
               {data.headers.map((row, rowIndex) => (
                 <tr key={`header-row-${rowIndex}`}>
                   {row.map((cell) => (
@@ -41,7 +41,7 @@ export const SpecificationTable: React.FC<Props> = ({ title, data, className = '
                       key={cell.id}
                       colSpan={cell.colSpan || 1}
                       rowSpan={cell.rowSpan || 1}
-                      className={`border border-blue-600 px-4 py-3 font-semibold ${
+                      className={`border-4 border-white px-4 py-3 font-semibold text-center ${
                         cell.align === 'left' ? 'text-left' : 
                         cell.align === 'right' ? 'text-right' : 
                         'text-center'
@@ -56,11 +56,11 @@ export const SpecificationTable: React.FC<Props> = ({ title, data, className = '
           )}
 
           {/* Dynamic Body Rendering */}
-          <tbody className="bg-white text-gray-800">
+          <tbody className="bg-white">
             {data.rows.map((row, rowIndex) => (
               <tr 
                 key={`row-${rowIndex}`} 
-                className={rowIndex % 2 === 0 ? 'bg-white' : 'bg-blue-50'} // Striped rows
+                className={rowIndex % 2 === 0 ? 'bg-white' : 'bg-[#E8F1FA]'}
               >
                 {row.map((cell) => {
                   const CellTag = cell.isHeader ? 'th' : 'td';
@@ -69,13 +69,16 @@ export const SpecificationTable: React.FC<Props> = ({ title, data, className = '
                       key={cell.id}
                       colSpan={cell.colSpan || 1}
                       rowSpan={cell.rowSpan || 1}
-                      className={`border border-gray-200 px-4 py-3 ${
-                        cell.isHeader ? 'bg-blue-700 text-white font-semibold' : ''
+                      className={`border-4 px-4 py-3 text-center font-semibold border-gray-400 ${
+                        cell.isHeader 
+                          ? 'bg-white' 
+                          : ''
                       } ${
                         cell.align === 'left' ? 'text-left' : 
                         cell.align === 'right' ? 'text-right' : 
                         'text-center'
                       } ${cell.className || ''}`}
+                      style={cell.isHeader ? { color: '#004AAD' } : { color: '#1F2937' }}
                     >
                       {renderCellContent(cell.value)}
                     </CellTag>

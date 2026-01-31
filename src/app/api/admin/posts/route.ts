@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
 export async function GET(request: NextRequest) {
   try {
@@ -11,8 +11,8 @@ export async function GET(request: NextRequest) {
     const queryString = searchParams.toString();
     
     const url = queryString 
-      ? `${BACKEND_URL}/api/posts?${queryString}`
-      : `${BACKEND_URL}/api/posts`;
+      ? `${NEXT_PUBLIC_BASE_URL}/api/posts?${queryString}`
+      : `${NEXT_PUBLIC_BASE_URL}/api/posts`;
 
     const response = await fetch(url, {
       method: 'GET',
@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
 
     console.log('[API] POST /api/admin/posts - Token present:', !!token);
 
-    const response = await fetch(`${BACKEND_URL}/api/posts`, {
+    const response = await fetch(`${NEXT_PUBLIC_BASE_URL}/api/posts`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

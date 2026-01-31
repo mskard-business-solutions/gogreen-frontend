@@ -2,13 +2,13 @@ import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import axios from 'axios';
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
 export async function POST(request: Request) {
   try {
-    // Validate BACKEND_URL is configured
-    if (!process.env.BACKEND_URL) {
-      console.error('BACKEND_URL environment variable is not configured');
+    // Validate NEXT_PUBLIC_BASE_URL is configured
+    if (!process.env.NEXT_PUBLIC_BASE_URL) {
+      console.error('NEXT_PUBLIC_BASE_URL environment variable is not configured');
       return NextResponse.json(
         { error: 'Backend configuration error. Please contact support.' },
         { status: 500 }
@@ -16,9 +16,9 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    console.log(`Attempting login to backend: ${BACKEND_URL}/api/auth/login`);
+    console.log(`Attempting login to backend: ${NEXT_PUBLIC_BASE_URL}/api/auth/login`);
 
-    const response = await axios.post(`${BACKEND_URL}/api/auth/login`, body, {
+    const response = await axios.post(`${NEXT_PUBLIC_BASE_URL}/api/auth/login`, body, {
       headers: {
         'Content-Type': 'application/json',
       },

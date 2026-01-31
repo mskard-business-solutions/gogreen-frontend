@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
 export async function GET(
   request: Request,
@@ -11,7 +11,7 @@ export async function GET(
     const { id } = await params;
     const cookieHeader = request.headers.get('cookie');
     
-    const response = await axios.get(`${BACKEND_URL}/api/categories/${id}`, {
+    const response = await axios.get(`${NEXT_PUBLIC_BASE_URL}/api/categories/${id}`, {
       headers: {
         'Cookie': cookieHeader || '',
       },
@@ -43,7 +43,7 @@ export async function PATCH(
 
     const body = await request.json();
     
-    const response = await axios.patch(`${BACKEND_URL}/api/categories/${id}`, body, {
+    const response = await axios.patch(`${NEXT_PUBLIC_BASE_URL}/api/categories/${id}`, body, {
       headers: {
         'Content-Type': 'application/json',
         'Cookie': cookieHeader,
@@ -74,7 +74,7 @@ export async function DELETE(
       return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
     }
     
-    const response = await axios.delete(`${BACKEND_URL}/api/categories/${id}`, {
+    const response = await axios.delete(`${NEXT_PUBLIC_BASE_URL}/api/categories/${id}`, {
       headers: {
         'Cookie': cookieHeader,
       },

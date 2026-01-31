@@ -9,7 +9,7 @@ import PageHeader from "@/components/PageHeader";
 import CategoryProductGrid from "@/components/CategoryProductGrid";
 import Footer from "@/components/Footer";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:3001';
+const API_BASE_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 const API_URL = `${API_BASE_URL}/api`;
 
 interface Category {

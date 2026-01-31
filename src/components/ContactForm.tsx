@@ -27,7 +27,7 @@ const ContactForm = () => {
     };
 
     try {
-      const apiUrl = `${process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001"}/api`;
+      const apiUrl = `${process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || "http://localhost:3001"}/api`;
       await axios.post(`${apiUrl}/contact`, data);
       setStatus("success");
       (e.target as HTMLFormElement).reset();

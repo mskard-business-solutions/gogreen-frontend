@@ -1,8 +1,11 @@
 import Sidebar from '@/components/Sidebar';
-import { AuthProvider } from '@/contexts/AuthContext';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 
-function AdminLayoutContent({ children }: { children: React.ReactNode }) {
+export default function AdminDashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <ProtectedRoute>
       <div className="flex h-screen bg-gray-100 overflow-hidden">
@@ -12,17 +15,5 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
         </main>
       </div>
     </ProtectedRoute>
-  );
-}
-
-export default function AdminLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <AuthProvider>
-      <AdminLayoutContent>{children}</AdminLayoutContent>
-    </AuthProvider>
   );
 }

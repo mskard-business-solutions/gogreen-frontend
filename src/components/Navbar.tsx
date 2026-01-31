@@ -110,7 +110,7 @@ const Navbar = () => {
                 />
                 <button 
                   type="submit"
-                  className="absolute right-0 top-0 w-12 h-12 flex items-center justify-content-center bg-primary text-white hover:bg-dark transition-colors rounded-full m-0.5"
+                  className="absolute right-2 top-0 w-12 h-12 flex items-center justify-center bg-primary text-white hover:bg-dark transition-colors rounded-full m-0.5"
                 >
                   {isSearching ? (
                     <i className="fa fa-spinner fa-spin"></i>
@@ -201,7 +201,7 @@ const Navbar = () => {
                     />
                     <button 
                       type="submit"
-                      className="absolute right-0 top-0 w-12 h-12 flex items-center justify-center bg-primary text-white hover:bg-dark transition-colors rounded-full m-0.5"
+                      className="absolute right-2 top-0 w-12 h-12 flex items-center justify-center bg-primary text-white hover:bg-dark transition-colors rounded-full m-0.5"
                     >
                       {isSearching ? (
                         <i className="fa fa-spinner fa-spin"></i>

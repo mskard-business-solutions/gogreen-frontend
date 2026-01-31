@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import axios from 'axios';
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
 export async function DELETE(
   request: NextRequest,
@@ -16,7 +16,7 @@ export async function DELETE(
 
     const { id } = await params;
 
-    const response = await axios.delete(`${BACKEND_URL}/api/users/${id}`, {
+    const response = await axios.delete(`${NEXT_PUBLIC_BASE_URL}/api/users/${id}`, {
       headers: {
         'Cookie': cookieHeader,
       },

@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import axios from 'axios';
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:3001';
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    const response = await axios.post(`${BACKEND_URL}/api/analytics/track`, body, {
+    const response = await axios.post(`${NEXT_PUBLIC_BASE_URL}/api/analytics/track`, body, {
       validateStatus: () => true,
     });
 

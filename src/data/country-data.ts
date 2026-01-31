@@ -11,8 +11,8 @@ export interface CountryData {
 
 export const countryData: Record<string, CountryData> = {
   "australia": {
-    "title": "Bhutan",
-    "intro": "Vidhi Enterprises supports Bhutan’s agriculture by supplying easy-to-install drip systems that help smallholder farmers improve productivity across terraced fields and high-altitude farmlands.",
+    "title": "Australia",
+    "intro": "Vidhi Enterprises supplies premium irrigation systems to Australia's agriculture sector, supporting vineyards, orchards, vegetable farms, and modern greenhouse operations.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -20,8 +20,8 @@ export const countryData: Record<string, CountryData> = {
     "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Australia.png"
   },
   "bahrain": {
-    "title": "Bhutan",
-    "intro": "Vidhi Enterprises supports Bhutan’s agriculture by supplying easy-to-install drip systems that help smallholder farmers improve productivity across terraced fields and high-altitude farmlands.",
+    "title": "Bahrain",
+    "intro": "Vidhi Enterprises supplies high-quality irrigation systems for Bahrain's landscaping, agriculture, and public green projects in this desert climate.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -29,8 +29,8 @@ export const countryData: Record<string, CountryData> = {
     "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Bahrain.png"
   },
   "bangladesh": {
-    "title": "Bhutan",
-    "intro": "Vidhi Enterprises supports Bhutan’s agriculture by supplying easy-to-install drip systems that help smallholder farmers improve productivity across terraced fields and high-altitude farmlands.",
+    "title": "Bangladesh",
+    "intro": "Vidhi Enterprises supplies efficient irrigation systems to Bangladesh's agriculture sector, supporting rice fields, vegetable farms, and aquaculture operations.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -47,8 +47,8 @@ export const countryData: Record<string, CountryData> = {
     "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Bhutan.png"
   },
   "bolivia": {
-    "title": "Bhutan",
-    "intro": "Vidhi Enterprises supports Bhutan’s agriculture by supplying easy-to-install drip systems that help smallholder farmers improve productivity across terraced fields and high-altitude farmlands.",
+    "title": "Bolivia",
+    "intro": "Vidhi Enterprises provides irrigation solutions to Bolivia's agriculture sector, supporting farms in diverse climates from high-altitude regions to lowland areas.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -74,8 +74,8 @@ export const countryData: Record<string, CountryData> = {
     "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Brazil.png"
   },
   "burundi": {
-    "title": "Brazil",
-    "intro": "Vidhi Enterprises supplies robust, high-performance irrigation systems to Brazil’s vast agricultural sector, including coffee plantations, sugarcane estates, fruit orchards, and vegetable farms.",
+    "title": "Burundi",
+    "intro": "Vidhi Enterprises supplies affordable and efficient irrigation systems to Burundi's smallholder farmers, supporting vegetable cultivation and coffee production.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -245,8 +245,8 @@ export const countryData: Record<string, CountryData> = {
     "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Lebanon.png"
   },
   "malawi": {
-    "title": "Maldives",
-    "intro": "Vidhi Enterprises supplies corrosion-resistant irrigation systems for Maldives, where resorts, landscaping projects, and nurseries require durable irrigation solutions.",
+    "title": "Malawi",
+    "intro": "Vidhi Enterprises supplies affordable irrigation systems to Malawi's agriculture sector, supporting smallholder farmers, tobacco estates, and vegetable growers.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -273,7 +273,7 @@ export const countryData: Record<string, CountryData> = {
   },
   "mongolia": {
     "title": "Mongolia",
-    "intro": "Vidhi Enterprises provides efficient irrigation systems to Myanmar’s agriculture sector, supporting rice fields, vegetable farms, and plantation crops.",
+    "intro": "Vidhi Enterprises provides irrigation systems to Mongolia's agriculture sector, supporting greenhouse operations and crop cultivation in challenging climates.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -290,8 +290,8 @@ export const countryData: Record<string, CountryData> = {
     "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Morocco.png"
   },
   "mozambique": {
-    "title": "Myanmar",
-    "intro": "Vidhi Enterprises provides efficient irrigation systems to Myanmar’s agriculture sector, supporting rice fields, vegetable farms, and plantation crops.",
+    "title": "Mozambique",
+    "intro": "Vidhi Enterprises supplies irrigation systems to Mozambique's agriculture sector, supporting cashew plantations, vegetable farms, and fruit orchards.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -308,8 +308,8 @@ export const countryData: Record<string, CountryData> = {
     "flagImage": "https://d170mw2nhcb1v0.cloudfront.net/img/Myanmar.png"
   },
   "namibia": {
-    "title": "Myanmar",
-    "intro": "Vidhi Enterprises provides efficient irrigation systems to Myanmar’s agriculture sector, supporting rice fields, vegetable farms, and plantation crops.",
+    "title": "Namibia",
+    "intro": "Vidhi Enterprises supplies water-efficient irrigation systems to Namibia's agriculture sector, essential in this arid climate for sustainable farming.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -318,7 +318,7 @@ export const countryData: Record<string, CountryData> = {
   },
   "nepal": {
     "title": "Nepal",
-    "intro": "Vidhi Enterprises provides efficient irrigation systems to Myanmar’s agriculture sector, supporting rice fields, vegetable farms, and plantation crops.",
+    "intro": "Vidhi Enterprises supplies irrigation systems to Nepal's agriculture sector, supporting terraced farming, vegetable cultivation, and high-altitude agriculture.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -327,7 +327,7 @@ export const countryData: Record<string, CountryData> = {
   },
   "netherlands": {
     "title": "Netherlands",
-    "intro": "Vidhi Enterprises provides efficient irrigation systems to Myanmar’s agriculture sector, supporting rice fields, vegetable farms, and plantation crops.",
+    "intro": "Vidhi Enterprises supplies advanced irrigation systems to the Netherlands' greenhouse and horticulture sectors, supporting high-tech agriculture operations.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -336,7 +336,7 @@ export const countryData: Record<string, CountryData> = {
   },
   "new-zealand": {
     "title": "New Zealand",
-    "intro": "Vidhi Enterprises provides efficient irrigation systems to Myanmar’s agriculture sector, supporting rice fields, vegetable farms, and plantation crops.",
+    "intro": "Vidhi Enterprises supplies quality irrigation systems to New Zealand's agriculture sector, supporting dairy farms, orchards, vineyards, and vegetable production.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -345,7 +345,7 @@ export const countryData: Record<string, CountryData> = {
   },
   "niger": {
     "title": "Niger",
-    "intro": "Vidhi Enterprises provides efficient irrigation systems to Myanmar’s agriculture sector, supporting rice fields, vegetable farms, and plantation crops.",
+    "intro": "Vidhi Enterprises supplies water-efficient irrigation systems to Niger's agriculture sector, crucial for farming in this arid Sahel region.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],
@@ -354,7 +354,7 @@ export const countryData: Record<string, CountryData> = {
   },
   "nigeria": {
     "title": "Nigeria",
-    "intro": "Vidhi Enterprises provides efficient irrigation systems to Myanmar’s agriculture sector, supporting rice fields, vegetable farms, and plantation crops.",
+    "intro": "Vidhi Enterprises supplies irrigation systems to Nigeria's large agriculture sector, supporting vegetable farms, rice fields, fruit orchards, and commercial plantations.",
     "marketInsights": [],
     "productsSupplied": [],
     "industriesServed": [],

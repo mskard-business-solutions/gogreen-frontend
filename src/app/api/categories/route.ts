@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
 export async function GET() {
   try {
-    const response = await axios.get(`${BACKEND_URL}/api/categories`, {
+    const response = await axios.get(`${NEXT_PUBLIC_BASE_URL}/api/categories`, {
       validateStatus: () => true,
     });
 

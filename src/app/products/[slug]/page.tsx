@@ -1,10 +1,13 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 import { ProductSpecifications } from "@/components/ProductSpecifications";
+import { Contact } from "lucide-react";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
@@ -24,6 +27,7 @@ interface Product {
   isFeatured: boolean;
   metaTitle?: string;
   metaDescription?: string;
+  seoKeywords?: string[];
   pdfUrl?: string;
   specifications?: any[];
 }
@@ -89,6 +93,80 @@ async function getCategoryById(id: string): Promise<Category | null> {
   }
 }
 
+// Generate SEO metadata
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const product = await getProductBySlug(slug);
+
+  if (!product) {
+    return {
+      title: 'Product Not Found',
+      description: 'The requested product could not be found.',
+    };
+  }
+
+  const title = product.metaTitle || `${product.name} | GoGreen`;
+  const description = product.metaDescription || product.shortDescription || product.description?.substring(0, 160) || `Buy ${product.name} from GoGreen`;
+  const keywords = product.seoKeywords?.join(', ') || product.name;
+  const mainImage = product.images && product.images.length > 0 
+    ? product.images[0] 
+    : 'https://d170mw2nhcb1v0.cloudfront.net/img/default-product.png';
+
+  return {
+    title,
+    description,
+    keywords,
+    authors: [{ name: 'GoGreen' }],
+    creator: 'GoGreen',
+    publisher: 'GoGreen',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: mainImage,
+          width: 1200,
+          height: 630,
+          alt: product.name,
+        }
+      ],
+      type: 'product',
+      siteName: 'GoGreen',
+      locale: 'en_US',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [mainImage],
+      creator: '@gogreen',
+    },
+    alternates: {
+      canonical: `/products/${slug}`,
+    },
+    other: {
+      'product:price:amount': product.price?.replace(/[^0-9.]/g, '') || '',
+      'product:price:currency': 'USD',
+      'product:availability': 'in stock',
+    },
+  };
+}
+
 export default async function ProductPage({
   params,
 }: {
@@ -139,8 +217,39 @@ export default async function ProductPage({
     ? product.images[0] 
     : 'https://d170mw2nhcb1v0.cloudfront.net/img/default-product.png';
 
+  // Generate JSON-LD structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "description": product.shortDescription || product.description || `Buy ${product.name} from GoGreen`,
+    "image": mainImage,
+    "brand": {
+      "@type": "Brand",
+      "name": "GoGreen"
+    },
+    ...(product.price && {
+      "offers": {
+        "@type": "Offer",
+        "price": product.price.replace(/[^0-9.]/g, ''),
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }),
+    ...(product.seoKeywords && product.seoKeywords.length > 0 && {
+      "keywords": product.seoKeywords.join(", ")
+    })
+  };
+
   return (
     <main className="min-h-screen">
+      {/* JSON-LD Structured Data */}
+      <Script
+        id="product-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
       <Navbar />
       <PageHeader
         title={product.name}
@@ -237,12 +346,6 @@ export default async function ProductPage({
                   <span className="font-semibold">SKU:</span> {product.sku}
                 </div>
               )}
-
-              <div className="pt-6">
-                <button className="bg-primary hover:bg-secondary text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
-                  Contact for Quote
-                </button>
-              </div>
             </div>
           </div>
 
@@ -257,8 +360,16 @@ export default async function ProductPage({
           )}
 
           {/* PDF Download Section */}
-          {product.pdfUrl && (
-             <div className="max-w-4xl mx-auto mb-16 text-center">
+          {/* Specifications */}
+          {product.specifications && product.specifications.length > 0 && (
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Product Specifications</h2>
+              <ProductSpecifications specifications={product.specifications} />
+            </div>
+          )}
+
+          <div className="max-w-4xl mx-auto mb-16 text-center space-y-6">
+            {product.pdfUrl && (
                <a 
                  href={product.pdfUrl} 
                  target="_blank" 
@@ -270,16 +381,17 @@ export default async function ProductPage({
                  </svg>
                  Download Product Brochure (PDF)
                </a>
-             </div>
-          )}
-
-          {/* Specifications */}
-          {product.specifications && product.specifications.length > 0 && (
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Product Specifications</h2>
-              <ProductSpecifications specifications={product.specifications} />
+            )}
+            
+            <div>
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-primary hover:bg-secondary text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg"
+               >
+                
+                Contact for Quote
+              </Link>
+          
             </div>
-          )}
+          </div>
         </div>
       </section>
 

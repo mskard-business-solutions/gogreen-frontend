@@ -1,13 +1,13 @@
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3001';
+const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 
 export async function POST(request: Request) {
   try {
     const cookieHeader = request.headers.get('cookie');
 
-    await axios.post(`${BACKEND_URL}/api/auth/logout`, {}, {
+    await axios.post(`${NEXT_PUBLIC_BASE_URL}/api/auth/logout`, {}, {
       headers: {
         'Cookie': cookieHeader || '',
       },

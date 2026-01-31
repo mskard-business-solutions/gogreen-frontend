@@ -5,7 +5,7 @@ import { useRouter, useParams } from 'next/navigation';
 import { TableData, TableCell, ProductSpecification } from '@/types/specification';
 import { SpecificationTable } from '@/components/SpecificationTable';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:3001';
+const API_BASE_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 const API_URL = `${API_BASE_URL}/api`;
 
 export default function ProductSpecificationsPage() {
@@ -41,7 +41,7 @@ export default function ProductSpecificationsPage() {
   const fetchSpecifications = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${API_BASE_URL}/specifications/product/${productId}?includeInactive=true`, {
+      const response = await fetch(`${API_URL}/specifications/product/${productId}?includeInactive=true`, {
         credentials: 'include',
       });
 
@@ -121,8 +121,8 @@ export default function ProductSpecificationsPage() {
 
     try {
       const url = editingId
-        ? `${API_BASE_URL}/specifications/${editingId}`
-        : `${API_BASE_URL}/specifications`;
+        ? `${API_URL}/specifications/${editingId}`
+        : `${API_URL}/specifications`;
 
       const method = editingId ? 'PUT' : 'POST';
 
@@ -157,7 +157,7 @@ export default function ProductSpecificationsPage() {
 
   const toggleStatus = async (id: string) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/specifications/${id}/toggle-active`, {
+      const response = await fetch(`${API_URL}/specifications/${id}/toggle-active`, {
         method: 'PATCH',
         credentials: 'include',
       });
@@ -178,7 +178,7 @@ export default function ProductSpecificationsPage() {
     }
 
     try {
-      const response = await fetch(`${API_BASE_URL}/specifications/${id}`, {
+      const response = await fetch(`${API_URL}/specifications/${id}`, {
         method: 'DELETE',
         credentials: 'include',
       });
