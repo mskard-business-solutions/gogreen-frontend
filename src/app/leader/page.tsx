@@ -278,7 +278,7 @@ export default function Leader() {
               </p>
               <p className="mb-2">
                 <i className="fa fa-envelope me-3"></i>
-                buyfromvidhi@gmail.com
+                info@vidhienterprises.com
               </p>
             </div>
           </div>

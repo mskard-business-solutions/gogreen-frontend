@@ -66,7 +66,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold mb-2">Our Office</h4>
-                  <p className="text-gray-400">123 Irrigation Way, Agri Tech Park, Industrial Area, India</p>
+                  <p className="text-gray-400">Factory Address: 485-A/7A. Ahinsa Compound, Dilshad Garden Industrial Area, G.T. Road, Shahadra, Delhi – 110095, India</p>
                 </div>
               </div>
               
@@ -77,7 +77,7 @@ const ContactPage = () => {
                 <div>
                   <h4 className="text-xl font-bold mb-2">Email Us</h4>
                   <p className="text-gray-400">info@vidhienterprises.com</p>
-                  <p className="text-gray-400">support@vidhienterprises.com</p>
+                  <p className="text-gray-400 text-sm mt-1">For queries: vibhor@vidhienterprises.com</p>
                 </div>
               </div>
               
@@ -87,8 +87,8 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold mb-2">Call Us</h4>
-                  <p className="text-gray-400">+91 98765 43210</p>
-                  <p className="text-gray-400">+91 12345 67890</p>
+                  <p className="text-gray-400">Vineet Jain: +91-9891776189</p>
+                  <p className="text-gray-400">Vibhor Jain: +91-8376007474</p>
                 </div>
               </div>
             </div>

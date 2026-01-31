@@ -129,9 +129,9 @@ const CareersPage = () => {
           <h2 className="text-4xl lg:text-5xl font-bold mb-10 font-heading text-white">How to Apply</h2>
           <p className="text-2xl font-light mb-12 max-w-2xl mx-auto">
             Email your resume to:<br />
-            <strong className="text-3xl lg:text-4xl block mt-4 font-bold">careers@vidhienterprises.com</strong>
+            <strong className="text-3xl lg:text-4xl block mt-4 font-bold">hr@vidhienterprises.com</strong>
           </p>
-          <a href="mailto:careers@vidhienterprises.com" className="inline-block bg-white text-[#1e40af] px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-110 hover:shadow-white/20 transition-all animate-pulse">
+          <a href="mailto:hr@vidhienterprises.com" className="inline-block bg-white text-[#1e40af] px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-110 hover:shadow-white/20 transition-all animate-pulse">
             Send Your Resume
           </a>
         </div>

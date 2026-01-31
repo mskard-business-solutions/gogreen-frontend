@@ -1,11 +1,52 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import axios from "axios";
+
+interface Category {
+  id: string;
+  name: string;
+  slug: string;
+  isActive: boolean;
+}
+
+// Default hardcoded categories as fallback
+const defaultCategories: Category[] = [
+  { id: '1', name: 'Drip Irrigation', slug: 'dripirri', isActive: true },
+  { id: '2', name: 'Sprinkler Irrigation', slug: 'sprinkler', isActive: true },
+  { id: '3', name: 'Rain Sprinkler', slug: 'rainsprinkler', isActive: true },
+  { id: '4', name: 'Landscape Irrigation', slug: 'landscape', isActive: true },
+  { id: '5', name: 'Vidhi Kit', slug: 'vidhi-kit', isActive: true },
+  { id: '6', name: 'Economical Irrigation', slug: 'economical', isActive: true },
+];
 
 const Footer = () => {
+  const [categories, setCategories] = useState<Category[]>(defaultCategories);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const API_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
+        const res = await axios.get(`${API_URL}/api/categories`);
+        if (res.data.success && res.data.data.length > 0) {
+          const activeCategories = res.data.data.filter((cat: Category) => cat.isActive);
+          // Use fetched categories if available, otherwise keep default
+          if (activeCategories.length > 0) {
+            setCategories(activeCategories);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching categories for footer:', error);
+        // Keep default categories on error
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -132,16 +173,10 @@ const Footer = () => {
           <motion.div variants={itemVariants}>
             <h4 className="text-xl font-bold mb-8 relative after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-12 after:h-1 after:bg-primary">Our Products</h4>
             <ul className="space-y-4 text-gray-400">
-              {[
-                { href: "/dripirri", label: "Drip Irrigation" },
-                { href: "/sprinkler", label: "Sprinkler Irrigation" },
-                { href: "/rainsprinkler", label: "Rain Gun" },
-                { href: "/landscape", label: "Landscape Irrigation" },
-                { href: "/vidhi-kit", label: "Vidhi Kit" },
-              ].map((link, i) => (
-                <motion.li key={i} whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
-                  <Link href={link.href} className="hover:text-white transition">
-                    {link.label}
+              {categories.map((category) => (
+                <motion.li key={category.id} whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
+                  <Link href={`/${category.slug}`} className="hover:text-white transition">
+                    {category.name}
                   </Link>
                 </motion.li>
               ))}
@@ -161,7 +196,7 @@ const Footer = () => {
               </motion.li>
               <motion.li whileHover={{ x: 5 }} className="flex items-center">
                 <i className="fa fa-envelope mr-4 text-primary"></i>
-                <span>buyfromvidhi@gmail.com</span>
+                <span>info@vidhienterprises.com</span>
               </motion.li>
             </ul>
           </motion.div>

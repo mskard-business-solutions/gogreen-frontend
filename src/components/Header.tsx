@@ -13,7 +13,7 @@ export default function Header() {
             </div>
             <div className="flex items-center gap-2">
               <span className="far fa-envelope"></span>
-              <span>buyfromvidhi@gmail.com</span>
+              <span>info@vidhienterprises.com</span>
             </div>
           </div>
           <div className="px-5 flex items-center gap-2">

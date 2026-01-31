@@ -198,6 +198,89 @@ export default function Home() {
       <AboutSection />
       <StatsSection />
       
+      {/* YouTube Videos Section */}
+      <section className="py-20 bg-white" aria-labelledby="company-videos">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <p className="text-primary font-bold uppercase tracking-wider mb-2">Watch Our Story</p>
+            <div className="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+            <h2 id="company-videos" className="text-4xl lg:text-5xl font-bold text-gray-900">
+              Latest Videos from Vidhi Enterprises
+            </h2>
+          </div>
+          
+          {/* Video Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Video Card 1 */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+              <div className="relative pb-[56.25%] h-0 overflow-hidden bg-gray-200">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0&modestbranding=1"
+                  title="Latest Product Innovation"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Latest Product Innovation</h3>
+                <p className="text-gray-600 text-sm">Discover our newest irrigation solutions</p>
+              </div>
+            </div>
+
+            {/* Video Card 2 */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+              <div className="relative pb-[56.25%] h-0 overflow-hidden bg-gray-200">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0&modestbranding=1"
+                  title="Customer Success Story"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Customer Success Story</h3>
+                <p className="text-gray-600 text-sm">See how we helped farmers succeed</p>
+              </div>
+            </div>
+
+            {/* Video Card 3 */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+              <div className="relative pb-[56.25%] h-0 overflow-hidden bg-gray-200">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/VIDEO_ID_3?rel=0&modestbranding=1"
+                  title="Manufacturing Excellence"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Manufacturing Excellence</h3>
+                <p className="text-gray-600 text-sm">Behind the scenes at our facility</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-12">
+            <a
+              href="https://www.youtube.com/@vidhi_enterprises"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-primary text-white font-bold py-4 px-8 rounded-full hover:bg-secondary transition shadow-lg hover:shadow-xl"
+            >
+              <i className="fab fa-youtube text-2xl"></i>
+              Visit Our YouTube Channel for More Videos
+            </a>
+          </div>
+        </div>
+      </section>
+      
       {/* Why Choose Us Section - Integrated into About/Features or added here */}
       <section className="py-20 bg-whitesmoke" aria-labelledby="why-choose-us">
         <div className="container mx-auto px-4">
