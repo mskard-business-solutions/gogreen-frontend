@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 // Create axios instance with default configuration
+// Using relative path so requests go through Next.js proxy (same-origin)
 const axiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api',
+  baseURL: '/api',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
