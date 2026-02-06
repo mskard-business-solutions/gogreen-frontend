@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import worldMapData from '@/data/world-map-paths.json';
 
 interface CountryPath {
@@ -49,6 +50,49 @@ const HIGHLIGHTED_COUNTRIES = new Set([
   'Papua New Guinea', 'New Zealand',
 ]);
 
+// Mapping of country names to their export page URL slugs
+const COUNTRY_URL_MAPPING: Record<string, string> = {
+  'Bahrain': 'bahrain',
+  'Bangladesh': 'bangladesh',
+  'Bhutan': 'bhutan',
+  'Bolivia': 'bolivia',
+  'Botswana': 'botswana',
+  'Brazil': 'brazil',
+  'Burundi': 'burundi',
+  'Chile': 'chile',
+  'Egypt': 'egypt',
+  'Ethiopia': 'ethiopia',
+  'Gabon': 'gabon',
+  'The Gambia': 'gambia',
+  'Georgia': 'georgia',
+  'Ghana': 'ghana',
+  'Guinea': 'guinea',
+  'Indonesia': 'indonesia',
+  'Iran': 'iran',
+  'Iraq': 'iraq',
+  'Kenya': 'kenya',
+  'Kuwait': 'kuwait',
+  'Lebanon': 'lebanon',
+  'Mexico': 'mexico',
+  'Morocco': 'morocco',
+  'Oman': 'oman',
+  'Peru': 'peru',
+  'Philippines': 'philippines',
+  'Senegal': 'senegal',
+  'Somalia': 'somalia',
+  'South Africa': 'south-africa',
+  'Sri Lanka': 'sri-lanka',
+  'Sudan': 'sudan',
+  'Tanzania': 'tanzania',
+  'Thailand': 'thailand',
+  'United Arab Emirates': 'uae',
+  'Uganda': 'uganda',
+  'Vietnam': 'viet-nam',
+  'Yemen': 'yemen',
+  'Zambia': 'zambia',
+  'Zimbabwe': 'zimbabwe',
+};
+
 const countryPaths: CountryPath[] = worldMapData as CountryPath[];
 
 // Debug: Log which countries are being highlighted
@@ -59,6 +103,14 @@ console.log('Matched countries:', matchedCountries.length, matchedCountries);
 
 export default function WorldMap() {
   const [tooltip, setTooltip] = useState<TooltipState | null>(null);
+  const router = useRouter();
+
+  const handleCountryClick = (countryName: string) => {
+    const urlSlug = COUNTRY_URL_MAPPING[countryName];
+    if (urlSlug) {
+      router.push(`/exports/${urlSlug}`);
+    }
+  };
 
   const handleMouseEnter = (countryName: string, event: React.MouseEvent<SVGPathElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -112,12 +164,13 @@ export default function WorldMap() {
             stroke="white"
             strokeWidth="0.5"
             style={{ 
-              cursor: 'pointer',
+              cursor: COUNTRY_URL_MAPPING[country.id] ? 'pointer' : 'default',
               transition: 'fill 0.2s ease'
             }}
             onMouseEnter={(e) => handleMouseEnter(country.id, e)}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
+            onClick={() => handleCountryClick(country.id)}
           />
         ))}
       </svg>
