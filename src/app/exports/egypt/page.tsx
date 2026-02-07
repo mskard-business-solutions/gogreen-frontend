@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Egypt | Vidhi Enterprises",
+  keywords: "irrigation Egypt, desert irrigation Egypt, drip Egypt",
+  description: "Vidhi Enterprises exports desert-suitable drip systems, filters, sprinklers and HDPE lines to Egypt's farms, greenhouses and palm plantations.",
+};
 
 export default function EgyptPage() {
   return (

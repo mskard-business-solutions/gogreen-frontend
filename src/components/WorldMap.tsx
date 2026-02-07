@@ -18,36 +18,35 @@ interface TooltipState {
 // List of highlighted countries (where GoGreen has presence)
 const HIGHLIGHTED_COUNTRIES = new Set([
   // The Americas - North America
-  'Mexico',
+  'United States', 'Mexico',
   
   // The Americas - Central America & Caribbean
-  'Guatemala', 'Belize', 'Honduras', 'El Salvador', 'Nicaragua', 'Costa Rica', 'Panama', 'Haiti', 'Dominican Republic',
+  'Guatemala', 'Belize', 'Honduras', 'El Salvador', 'Nicaragua', 'Costa Rica', 'Panama', 'Haiti', 'Dominican Republic', 'Guadeloupe',
   
   // The Americas - South America
-  'Colombia', 'Venezuela', 'Guyana', 'Suriname', 'Ecuador', 'Peru', 'Brazil', 'Bolivia', 'Paraguay',
+  'Colombia', 'Venezuela', 'Guyana', 'Suriname', 'Ecuador', 'Peru', 'Brazil', 'Bolivia', 'Paraguay', 'Chile',
   
-  // Africa - North & West Africa
-  'Morocco', 'Western Sahara', 'Mauritania', 'Senegal', 'The Gambia', 'Guinea-Bissau', 'Guinea', 'Sierra Leone', 'Liberia',
-  "Côte d'Ivoire", 'Ghana', 'Togo', 'Benin', 'Nigeria',
+  // Africa - North & West Africa 
+  'Morocco', 'Senegal', 'The Gambia', 'Guinea', 'Ghana', 'Nigeria', "Côte d'Ivoire", 'Niger',
   
   // Africa - Central & Southern Africa
-  'Cameroon', 'Equatorial Guinea', 'Gabon', 'Republic of Congo', 'Angola', 'Namibia', 'Botswana', 'South Africa',
+  'Cameroon', 'Gabon', 'Republic of Congo', 'Namibia', 'Botswana', 'South Africa',
   'Lesotho', 'Swaziland', 'Zimbabwe', 'Zambia', 'Malawi', 'Mozambique',
   
   // Africa - East Africa
-  'Egypt', 'Sudan', 'Eritrea', 'Djibouti', 'Ethiopia', 'Somalia', 'Kenya', 'Uganda', 'Tanzania', 'Madagascar',
+  'Egypt', 'Sudan', 'Eritrea', 'Djibouti', 'Ethiopia', 'Somalia', 'Kenya', 'Uganda', 'Tanzania', 'Madagascar', 'Rwanda', 'Seychelles',
   
   // Asia & The Middle East - Middle East
-  'Syria', 'Iraq', 'Iran', 'Yemen', 'Oman',
+  'Syria', 'Iraq', 'Iran', 'Yemen', 'Oman', 'Saudi Arabia', 'Lebanon', 'Kuwait', 'UAE', 'Qatar',
   
   // Asia & The Middle East - South & Central Asia
-  'Afghanistan', 'Pakistan', 'India', 'Nepal', 'Bhutan', 'Bangladesh', 'Sri Lanka', 'Mongolia',
+  'Afghanistan', 'India', 'Nepal', 'Bhutan', 'Bangladesh', 'Sri Lanka', 'Mongolia', 'Maldives',
   
   // Asia & The Middle East - Southeast Asia
   'Myanmar', 'Thailand', 'Vietnam', 'Cambodia', 'Malaysia', 'Philippines', 'Indonesia', 'Timor-Leste',
   
   // Oceania
-  'Papua New Guinea', 'New Zealand',
+  'Papua New Guinea', 'New Zealand', 'Netherlands',
 ]);
 
 // Mapping of country names to their export page URL slugs
@@ -59,13 +58,22 @@ const COUNTRY_URL_MAPPING: Record<string, string> = {
   'Botswana': 'botswana',
   'Brazil': 'brazil',
   'Burundi': 'burundi',
+  'Nepal': 'nepal',
+  'Netherlands': 'netherlands',
+  'New Zealand': 'new-zealand',
+  'Niger': 'niger',
+  'Nigeria': 'nigeria',
+  'Guatemala': 'guatemala',
+  'Cameroon': 'cameroon',
   'Chile': 'chile',
+  "Côte d'Ivoire": 'cote-divoire',
   'Egypt': 'egypt',
   'Ethiopia': 'ethiopia',
   'Gabon': 'gabon',
   'The Gambia': 'gambia',
   'Georgia': 'georgia',
   'Ghana': 'ghana',
+  'Guadeloupe': 'guadeloupe',
   'Guinea': 'guinea',
   'Indonesia': 'indonesia',
   'Iran': 'iran',
@@ -73,12 +81,21 @@ const COUNTRY_URL_MAPPING: Record<string, string> = {
   'Kenya': 'kenya',
   'Kuwait': 'kuwait',
   'Lebanon': 'lebanon',
+  'Maldives': 'maldives',
+  'Malawi': 'malawi',
   'Mexico': 'mexico',
+  'Mongolia': 'mongolia',
   'Morocco': 'morocco',
+  'Myanmar': 'myanmar',
+  'Namibia': 'namibia',
   'Oman': 'oman',
   'Peru': 'peru',
   'Philippines': 'philippines',
+  'Qatar': 'qatar',
+  'Rwanda': 'rwanda',
+  'Saudi Arabia': 'saudi-arabia',
   'Senegal': 'senegal',
+  'Seychelles': 'seychelles',
   'Somalia': 'somalia',
   'South Africa': 'south-africa',
   'Sri Lanka': 'sri-lanka',
@@ -87,6 +104,7 @@ const COUNTRY_URL_MAPPING: Record<string, string> = {
   'Thailand': 'thailand',
   'United Arab Emirates': 'uae',
   'Uganda': 'uganda',
+  'United States': 'usa',
   'Vietnam': 'viet-nam',
   'Yemen': 'yemen',
   'Zambia': 'zambia',
@@ -113,23 +131,19 @@ export default function WorldMap() {
   };
 
   const handleMouseEnter = (countryName: string, event: React.MouseEvent<SVGPathElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
     setTooltip({
       country: countryName,
-      x: rect.left + rect.width / 2,
-      y: rect.top - 10
+      x: event.clientX,
+      y: event.clientY - 20
     });
   };
 
-  const handleMouseMove = (event: React.MouseEvent<SVGPathElement>) => {
-    if (tooltip) {
-      const rect = event.currentTarget.getBoundingClientRect();
-      setTooltip({
-        ...tooltip,
-        x: rect.left + rect.width / 2,
-        y: rect.top - 10
-      });
-    }
+  const handleMouseMove = (countryName: string, event: React.MouseEvent<SVGPathElement>) => {
+    setTooltip({
+      country: countryName,
+      x: event.clientX,
+      y: event.clientY - 20
+    });
   };
 
   const handleMouseLeave = () => {
@@ -140,13 +154,22 @@ export default function WorldMap() {
     return HIGHLIGHTED_COUNTRIES.has(countryId);
   };
 
+  const getFillColor = (countryId: string): string => {
+    if (countryId === 'India') {
+      return '#FFD700'; // Gold for India
+    } else if (isHighlighted(countryId)) {
+      return '#7cb77c'; // Light green for other highlighted countries
+    }
+    return '#e0e0e0'; // Light grey for non-highlighted countries
+  };
+
   return (
     <div className="position-relative">
       <svg
         id="allSvg"
         baseProfile="tiny"
         fill="#ececec"
-        stroke="white"
+        stroke="black"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="0.5"
@@ -160,7 +183,7 @@ export default function WorldMap() {
             key={`${country.id}-${index}`}
             className="allPaths"
             d={country.d}
-            fill={isHighlighted(country.id) ? '#7cb77c' : '#e0e0e0'}
+            fill={getFillColor(country.id)}
             stroke="white"
             strokeWidth="0.5"
             style={{ 
@@ -168,7 +191,7 @@ export default function WorldMap() {
               transition: 'fill 0.2s ease'
             }}
             onMouseEnter={(e) => handleMouseEnter(country.id, e)}
-            onMouseMove={handleMouseMove}
+            onMouseMove={(e) => handleMouseMove(country.id, e)}
             onMouseLeave={handleMouseLeave}
             onClick={() => handleCountryClick(country.id)}
           />
@@ -178,23 +201,25 @@ export default function WorldMap() {
       {/* Tooltip */}
       {tooltip && (
         <div
-          id="name"
+          id="country-tooltip"
           style={{
             position: 'fixed',
             left: `${tooltip.x}px`,
             top: `${tooltip.y}px`,
-            transform: 'translateX(-50%)',
-            backgroundColor: 'rgba(0, 0, 0, 0.8)',
-            color: 'white',
-            padding: '4px 8px',
-            borderRadius: '4px',
-            fontSize: '12px',
+            transform: 'translate(-50%, -100%)',
+            backgroundColor: '#000',
+            color: '#fff',
+            padding: '8px 12px',
+            borderRadius: '6px',
+            fontSize: '14px',
+            fontWeight: 'bold',
             pointerEvents: 'none',
-            zIndex: 1000,
-            whiteSpace: 'nowrap'
+            zIndex: 9999,
+            whiteSpace: 'nowrap',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
           }}
         >
-          <p style={{ margin: 0 }}>{tooltip.country}</p>
+          {tooltip.country}
         </div>
       )}
     </div>

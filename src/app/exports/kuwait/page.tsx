@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Kuwait | Vidhi Enterprises",
+  keywords: "irrigation Kuwait, drip Kuwait, sprinkler Kuwait",
+  description: "Vidhi Enterprises exports UV-resistant drip systems, sprinklers, foggers and HDPE lines for Kuwait's landscaping and farming sectors.",
+};
 
 export default function KuwaitPage() {
   return (

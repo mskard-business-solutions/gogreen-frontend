@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const keywords = Array.isArray(post.seoKeywords) ? post.seoKeywords.join(', ') : 'irrigation, agriculture, farming, drip irrigation, sprinkler systems';
 
   return {
-    title: `${post.title} | Vidhi Go Green`,
+    title: `${post.title} | Vidhi greenO2`,
     description: description || post.title,
     keywords: keywords,
     openGraph: {
@@ -121,12 +121,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     dateModified: post.updatedAt,
     author: {
       '@type': 'Organization',
-      name: 'Vidhi Go Green',
+      name: 'Vidhi greenO2',
       url: 'https://vidhienterprises.com'
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Vidhi Go Green',
+      name: 'Vidhi greenO2',
       logo: {
         '@type': 'ImageObject',
         url: 'https://vidhienterprises.com/logo.png'

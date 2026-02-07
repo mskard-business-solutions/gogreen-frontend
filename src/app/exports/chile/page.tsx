@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Chile | Vidhi Enterprises",
+  keywords: "irrigation Chile, vineyard irrigation Chile, orchard irrigation Chile",
+  description: "Vidhi Enterprises exports precision vineyard drip lines, orchard drippers, sprinklers and filtration systems for Chile's agricultural sector.",
+};
 
 export default function ChilePage() {
   return (

@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+  import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 export const metadata: Metadata = {
@@ -65,7 +65,7 @@ export default function MiniSprinklerAccessories() {
               </div>
               <Link href="/contact" className="nav-item nav-link"><b>Contact Us</b></Link>
               <Link href="/" className="navbar-brand d-flex align-items-center ps-4 mt-3 mt-lg-0">
-                <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/logo-olored.png" className="logo-img img-fluid" alt="Vidhi Enterprises Logo Right" style={{ marginLeft: '0.5rem', marginBottom: '11px' }} />
+                <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/logo-olored.png" className="logo-img img-fluid" alt="Vidhi Enterprises Logo Right" width={150} height={60} style={{ marginLeft: '0.5rem', marginBottom: '11px' }} />
               </Link>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function MiniSprinklerAccessories() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-18.png" style={{ width: '600px', height: '700px' }} alt="Mini Sprinkler" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-18.png" width={600} height={700} style={{ width: '600px', height: '700px' }} alt="Mini Sprinkler" />
                   </div>
                 </div>
               </div>
@@ -136,7 +136,7 @@ export default function MiniSprinklerAccessories() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-20.png" style={{ width: '600px', height: '700px' }} alt="MS Stand" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-20.png" width={600} height={700} style={{ width: '600px', height: '700px' }} alt="MS Stand" />
                   </div>
                 </div>
               </div>
@@ -167,7 +167,7 @@ export default function MiniSprinklerAccessories() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-21.png" style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-21.png" width={600} height={700} style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
                   </div>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default function MiniSprinklerAccessories() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-30.png" style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-30.png" width={600} height={700} style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
                   </div>
                 </div>
               </div>
@@ -213,7 +213,7 @@ export default function MiniSprinklerAccessories() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-31.png" style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-31.png" width={600} height={700} style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
                   </div>
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function MiniSprinklerAccessories() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-32.png" style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-32.png" width={600} height={700} style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
                   </div>
                 </div>
               </div>
@@ -247,7 +247,7 @@ export default function MiniSprinklerAccessories() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-33.png" style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-33.png" width={600} height={700} style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
                   </div>
                 </div>
               </div>
@@ -264,7 +264,7 @@ export default function MiniSprinklerAccessories() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-34.png" style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-34.png" width={600} height={700} style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
                   </div>
                 </div>
               </div>
@@ -281,7 +281,7 @@ export default function MiniSprinklerAccessories() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-35.png" style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-35.png" width={600} height={700} style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
                   </div>
                 </div>
               </div>
@@ -298,7 +298,7 @@ export default function MiniSprinklerAccessories() {
               <div className="col-md-6">
                 <div className="box_main">
                   <div className="image_2">
-                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-36.png" style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
+                    <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Spri-36.png" width={600} height={700} style={{ width: '600px', height: '700px' }} alt="Tube Assembly" />
                   </div>
                 </div>
               </div>
@@ -306,7 +306,7 @@ export default function MiniSprinklerAccessories() {
                 <h5 className="display-9 mb-3 py-2" style={{ color: 'rgba(16, 16, 223, 0.668)' }}>Tube Assembly</h5>
                 <hr style={{ border: '2px solid darkgreen' }} />
                 <div className="image_2 text-center">
-                  <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Model-31.png" alt="Model 31" />
+                  <Image src="https://d170mw2nhcb1v0.cloudfront.net/img/Model-31.png" width={600} height={400} alt="Model 31" />
                 </div>
               </div>
             </div>

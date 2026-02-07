@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Tanzania | Vidhi Enterprises",
+  description:
+    "Vidhi Enterprises exports drip kits, sprinklers and HDPE fittings for Tanzania’s farms and community agriculture programs.",
+  keywords: "irrigation Tanzania, drip Tanzania, micro irrigation Tanzania",
+};
 
 export default function TanzaniaPage() {
   return (

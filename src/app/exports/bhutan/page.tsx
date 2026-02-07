@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Bhutan | Vidhi Enterprises",
+  keywords: "drip irrigation Bhutan, micro irrigation Bhutan, irrigation Bhutan",
+  description: "Vidhi Enterprises exports low-pressure drip systems and micro-irrigation accessories suited for Bhutan's terrace farming and smallholder agriculture.",
+};
 
 export default function BhutanPage() {
   return (

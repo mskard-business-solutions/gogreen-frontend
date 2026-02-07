@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Thailand | Vidhi Enterprises",
+  description:
+    "Vidhi Enterprises exports drip systems, drippers, foggers and filters for Thailand’s fruit, vegetable and greenhouse farms.",
+  keywords: "irrigation Thailand, drip Thailand, orchard irrigation Thailand",
+};
 
 export default function ThailandPage() {
   return (

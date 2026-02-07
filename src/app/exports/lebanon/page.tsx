@@ -1,7 +1,14 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
 
-export default function LebanonPage() {
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Lebanon | Vidhi Enterprises",
+  description: "Vidhi Enterprises supplies precision drippers, sprinklers, filters and HDPE pipes for Lebanon’s orchards, vineyards and greenhouses.",
+  keywords: "irrigation Lebanon, orchard irrigation Lebanon, vineyard irrigation Lebanon",
+};
+
+export default function Lebanon() {
   return (
     <CountryPageLayout
       countryName="Lebanon"

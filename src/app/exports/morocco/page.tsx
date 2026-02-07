@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Morocco | Drip, Olive & Citrus Irrigation Systems",
+  description: "Vidhi Enterprises exports drip systems, drippers, sprinklers and filters for Morocco’s olive, citrus and vegetable farming sectors.",
+  keywords: ["irrigation Morocco", "drip irrigation Morocco", "olive irrigation Morocco"],
+};
 
 export default function MoroccoPage() {
   return (

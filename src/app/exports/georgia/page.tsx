@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Georgia | Vidhi Enterprises",
+  keywords: "irrigation Georgia, vineyard irrigation Georgia, orchard irrigation Georgia",
+  description: "Vidhi Enterprises exports precision drip systems, foggers, sprinklers and filtration units for Georgia's vineyards, orchards and greenhouses.",
+};
 
 export default function GeorgiaPage() {
   return (

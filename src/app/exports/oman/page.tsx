@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Oman | Vidhi Enterprises",
+  keywords: "irrigation Oman, drip irrigation Oman, sprinkler Oman",
+  description:
+    "Vidhi Enterprises exports UV-resistant drip systems, sprinklers, foggers and filters for Oman’s landscaping and agricultural sectors.",
+};
 
 export default function OmanPage() {
   return (

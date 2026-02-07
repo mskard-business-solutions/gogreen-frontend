@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const LegacyLeaderPage = () => {
   const founderValues = [
@@ -54,6 +55,7 @@ const LegacyLeaderPage = () => {
       badge: "3rd Generation The Future-Ready Vision",
       name: "Mr. Vibhor Jain",
       title: "Innovation, Global Strategy and Next-Generation Precision",
+      email: "vibhor@vidhienterprises.com",
       img: "https://d170mw2nhcb1v0.cloudfront.net/img/5.jpg",
       intro: "Joining the company in 2018, he began his journey on the factory floor, gaining hands-on experience in production, moulding, testing and quality control. Before representing Vidhi Enterprises globally, he immersed himself in the company's technical foundation. His key contributions include:",
       points: [
@@ -145,6 +147,11 @@ const LegacyLeaderPage = () => {
                     </div>
                     <h2 className="text-3xl lg:text-4xl font-bold text-[#3d2b1f] font-heading">{gen.name}</h2>
                     <p className="text-lg text-[#1c9e1c] italic font-medium">{gen.title}</p>
+                    {gen.email && (
+                      <a href={`mailto:${gen.email}`} className="text-gray-600 hover:text-[#1c9e1c] transition-colors inline-flex items-center mt-1 font-medium">
+                        <i className="fas fa-envelope mr-2"></i>{gen.email}
+                      </a>
+                    )}
                     
                     {gen.intro && (
                       <p className="text-gray-700">{gen.intro}</p>

@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Mexico | Vidhi Enterprises",
+  keywords: "irrigation Mexico, drip irrigation Mexico, orchard irrigation Mexico",
+  description:
+    "Vidhi Enterprises exports drip systems, orchard drippers, sprinklers and filters for Mexico’s fruit, vegetable and plantation farms.",
+};
 
 export default function MexicoPage() {
   return (

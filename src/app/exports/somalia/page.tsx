@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Somalia | Vidhi Enterprises",
+  description:
+    "Vidhi Enterprises exports drip kits, micro sprinklers and HDPE pipes for Somalia’s farms and community irrigation programs.",
+  keywords: "irrigation Somalia, drip Somalia, micro irrigation Somalia",
+};
 
 export default function SomaliaPage() {
   return (

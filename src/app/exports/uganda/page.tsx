@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Uganda | Vidhi Enterprises",
+  description:
+    "Vidhi Enterprises exports drip kits, micro sprinklers, filters and HDPE pipes for Uganda’s farmers and cooperatives.",
+  keywords: "irrigation Uganda, drip Uganda, micro irrigation Uganda",
+};
 
 export default function UgandaPage() {
   return (

@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Brazil | Vidhi Enterprises",
+  keywords: "irrigation Brazil, drip irrigation Brazil, plantation irrigation Brazil",
+  description: "Vidhi Enterprises exports drip systems, plantation sprinklers, filters, and HDPE pipelines to Brazil's farms and agro-industrial sectors.",
+};
 
 export default function BrazilPage() {
   return (

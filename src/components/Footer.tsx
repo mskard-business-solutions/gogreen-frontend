@@ -82,9 +82,9 @@ const Footer = () => {
             <Image 
               src="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png" 
               alt="Logo" 
-              width={225}
-              height={90}
-              className="h-24 w-auto brightness-0 invert" 
+              width={300}
+              height={150}
+              className="h-36 w-auto brightness-0 invert" 
             />
             <p className="text-gray-400">
               Engineering Smart Irrigation Solutions for a Greener Tomorrow. Trusted manufacturer of Drip, Sprinkler & Micro Irrigation Products.
@@ -160,7 +160,7 @@ const Footer = () => {
                 { href: "/products", label: "Our Products" },
                 { href: "/blog", label: "Blog" },
                 { href: "/contact", label: "Contact Us" },
-                { href: "/privacy-policy", label: "Privacy Policy" },
+
               ].map((link, i) => (
                 <motion.li key={i} whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                   <Link href={link.href} className="hover:text-white transition">
@@ -210,7 +210,13 @@ const Footer = () => {
           transition={{ delay: 0.5, duration: 0.6 }}
           className="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500 text-sm"
         >
-          <p>© {new Date().getFullYear()} Vidhi Enterprises. All Rights Reserved. Designed by Go Green.</p>
+          <p>
+            © {new Date().getFullYear()} Vidhi Enterprises. All Rights Reserved. Designed by greenO2.
+            <span className="mx-2">|</span>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+          </p>
         </motion.div>
       </div>
     </footer>

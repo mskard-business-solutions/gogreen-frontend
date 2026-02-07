@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Myanmar | Vidhi Enterprises",
+  keywords: "irrigation Myanmar, drip Myanmar, plantation irrigation Myanmar",
+  description:
+    "Vidhi Enterprises exports drip systems, sprinklers, foggers and filtration units for Myanmar’s rice, vegetable and plantation farming.",
+};
 
 export default function MyanmarPage() {
   return (

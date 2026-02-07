@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Iraq | Vidhi Enterprises",
+  keywords: "irrigation Iraq, drip irrigation Iraq, sprinkler Iraq",
+  description: "Vidhi Enterprises exports drip systems, sprinklers, filters and HDPE pipes for Iraq's agriculture and landscaping sectors.",
+};
 
 export default function IraqPage() {
   return (

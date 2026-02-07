@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Guinea | Vidhi Enterprises",
+  keywords: "irrigation Guinea, drip Guinea, small farm irrigation Guinea",
+  description: "Vidhi Enterprises exports drip systems, micro sprinklers and filtration units for Guinea's small farmers and horticulture growers.",
+};
 
 export default function GuineaPage() {
   return (

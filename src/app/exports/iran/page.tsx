@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Iran | Vidhi Enterprises",
+  keywords: "irrigation Iran, orchard irrigation Iran, drip Iran",
+  description: "Vidhi Enterprises exports drip systems, impact sprinklers, filters and HDPE lines suited for Iran's arid agriculture and orchards.",
+};
 
 export default function IranPage() {
   return (

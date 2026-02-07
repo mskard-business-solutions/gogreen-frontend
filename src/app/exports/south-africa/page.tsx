@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions South Africa | Vidhi Enterprises",
+  description:
+    "Vidhi Enterprises exports vineyard drip lines, orchard drippers, sprinklers and filters for South Africa’s farms and nurseries.",
+  keywords: "irrigation South Africa, vineyard irrigation SA, orchard irrigation SA",
+};
 
 export default function SouthAfricaPage() {
   return (

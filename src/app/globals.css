@@ -114,7 +114,6 @@ button,
   /* Map Styles */
   .allPaths {
     @apply transition-all duration-300 cursor-pointer;
-    fill: #d0e8e0;
     stroke: #1c9e1c;
     stroke-width: 1.2;
   }

@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Senegal | Vidhi Enterprises",
+  description:
+    "Vidhi Enterprises exports drip kits, sprinklers and HDPE pipes for Senegal’s vegetable growers and community irrigation programs.",
+  keywords: "irrigation Senegal, drip Senegal, micro irrigation Senegal",
+};
 
 export default function SenegalPage() {
   return (

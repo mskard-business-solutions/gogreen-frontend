@@ -1,11 +1,18 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Sri Lanka | Drip, Rain Gun & Sprinkler Systems",
+  description: "Vidhi Enterprises exports drip systems, rain guns, sprinklers and filters for Sri Lanka’s tea plantations, orchards and greenhouse farms.",
+  keywords: ["irrigation Sri Lanka", "drip Sri Lanka", "rain gun Sri Lanka"],
+};
 
 export default function SriLankaPage() {
   return (
     <CountryPageLayout
       countryName="Sri Lanka"
-      flagSrc="https://d170mw2nhcb1v0.cloudfront.net/img/Sri Lanka.png"
+      flagSrc="https://d170mw2nhcb1v0.cloudfront.net/img/SriLanka.png"
       welcomeMessage="Welcome to our Sri Lanka irrigation solutions page."
       greeting="ආයුබෝවන්! (Ayubowan! Hello!)"
       introduction={[

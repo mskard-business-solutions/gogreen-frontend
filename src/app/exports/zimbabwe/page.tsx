@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Zimbabwe | Vidhi Enterprises",
+  description:
+    "Vidhi Enterprises exports drip kits, sprinklers and HDPE pipe systems for Zimbabwe’s farming and community irrigation sectors.",
+  keywords: "irrigation Zimbabwe, drip Zimbabwe, micro irrigation Zimbabwe",
+};
 
 export default function ZimbabwePage() {
   return (

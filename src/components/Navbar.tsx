@@ -80,7 +80,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 main-navbar py-2">
+    <nav className="sticky top-0 z-50 main-navbar py-2 bg-green-200">
       <div className="max-w-full px-0">
         <div className="flex flex-wrap lg:flex-nowrap items-center justify-between px-4 lg:px-10">
           
@@ -213,10 +213,10 @@ const Navbar = () => {
                 </form>
               </div>
               
-              <Link href="/" className="nav-link"><b>Home</b></Link>
+              <Link href="/" className="nav-link text-lg"><b>Home</b></Link>
               
               <div className="relative group">
-                <button className="nav-link flex items-center">
+                <button className="nav-link text-lg flex items-center">
                   <b>Products</b> <i className="fa fa-chevron-down ml-2 text-[10px]"></i>
                 </button>
                 <div className="lg:absolute left-0 mt-0 w-48 bg-light border-none rounded shadow-xl hidden group-hover:block z-50">
@@ -236,7 +236,7 @@ const Navbar = () => {
               </div>
 
               <div className="relative group">
-                <button className="nav-link flex items-center">
+                <button className="nav-link text-lg flex items-center">
                   <b>About Us</b> <i className="fa fa-chevron-down ml-2 text-[10px]"></i>
                 </button>
                 <div className="lg:absolute left-0 mt-0 w-56 bg-light border-none rounded shadow-xl hidden group-hover:block z-50">
@@ -254,7 +254,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <Link href="/contact" className="nav-link"><b>Contact Us</b></Link>
+              <Link href="/contact" className="nav-link text-lg"><b>Contact Us</b></Link>
 
               {/* Right Logo (Colored) */}
               <Link href="/" className="hidden lg:flex items-center ml-4">

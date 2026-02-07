@@ -1,4 +1,5 @@
 export interface ProductData {
+  name: string | TemplateString | null | undefined;
   title: string;
   category: string;
   categoryLink: string;

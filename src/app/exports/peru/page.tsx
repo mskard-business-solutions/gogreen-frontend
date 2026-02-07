@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Peru | Vidhi Enterprises",
+  keywords: "irrigation Peru, vineyard irrigation Peru, blueberry irrigation Peru",
+  description:
+    "Vidhi Enterprises exports vineyard drip systems, orchard drippers, filters and HDPE pipes for Peru’s fruit and vegetable farming sectors.",
+};
 
 export default function PeruPage() {
   return (

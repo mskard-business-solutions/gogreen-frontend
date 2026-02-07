@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Ghana | Vidhi Enterprises",
+  keywords: "irrigation Ghana, drip irrigation Ghana, micro irrigation Ghana",
+  description: "Vidhi Enterprises exports drip kits, micro sprinklers, filters and HDPE fittings for Ghana's vegetable, fruit and community farming sectors.",
+};
 
 export default function GhanaPage() {
   return (

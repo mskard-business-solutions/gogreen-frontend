@@ -4790,6 +4790,26 @@ export default function GlobalPresenceMap() {
           onMouseLeave={handleMouseLeave}
           onClick={() => handleCountryClick("Fiji")}
         />
+        <path
+          key="Lebanon"
+          className="allPaths cursor-pointer transition-all duration-300 hover:brightness-110 stroke-white stroke-[0.5]"
+          d="M1179.1 288.2l-1.4 0.1-0.4 1.1-1.8 0 1.3-5.3 2.2-4.5 0-0.2 2.5 0.3 1.2 2.5-2.7 2.5-0.9 3.5z"
+          id="Lebanon"
+          fill={getFillColor("Lebanon")}
+          onMouseMove={(e) => handleMouseMove(e, "Lebanon")}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => handleCountryClick("Lebanon")}
+        />
+        <path
+          key="Maldives"
+          className="allPaths cursor-pointer transition-all duration-300 hover:brightness-110 stroke-white stroke-[0.5]"
+          d="M 1420 490 m -2 0 a 2 2 0 1 0 4 0 a 2 2 0 1 0 -4 0"
+          id="Maldives"
+          fill={getFillColor("Maldives")}
+          onMouseMove={(e) => handleMouseMove(e, "Maldives")}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => handleCountryClick("Maldives")}
+        />
       </svg>
 
       {tooltip.show && (

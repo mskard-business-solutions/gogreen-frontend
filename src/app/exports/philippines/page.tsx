@@ -1,5 +1,13 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Philippines | Vidhi Enterprises",
+  keywords: "irrigation Philippines, drip Philippines, greenhouse irrigation Philippines",
+  description:
+    "Vidhi Enterprises exports drip lines, sprinklers, foggers and filters suited for the Philippines’ rice farms, plantations and greenhouses.",
+};
 
 export default function PhilippinesPage() {
   return (

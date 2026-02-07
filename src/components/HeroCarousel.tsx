@@ -27,7 +27,7 @@ const slides = [
   },
   {
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/C6.png",
-    text: "“Smart Irrigation Made Simple — Because Every Drop Counts”",
+    text: "“Innovating precision irrigation since 1983”",
   },
   {
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/C9.png",

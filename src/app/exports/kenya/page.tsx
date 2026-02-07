@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Kenya | Vidhi Enterprises",
+  keywords: "irrigation Kenya, drip irrigation Kenya, greenhouse irrigation Kenya",
+  description: "Vidhi Enterprises exports drip kits, sprinklers, foggers and HDPE fittings for Kenya's vegetable, flower and fruit farming sectors.",
+};
 
 export default function KenyaPage() {
   return (

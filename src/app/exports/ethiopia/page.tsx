@@ -1,5 +1,12 @@
 import React from "react";
 import CountryPageLayout from "@/components/CountryPageLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irrigation Solutions Ethiopia | Vidhi Enterprises",
+  keywords: "irrigation Ethiopia, drip irrigation Ethiopia, micro irrigation Ethiopia",
+  description: "Vidhi Enterprises exports drip kits, micro sprinklers, filters and HDPE pipes for Ethiopia's smallholder and community agriculture projects.",
+};
 
 export default function EthiopiaPage() {
   return (

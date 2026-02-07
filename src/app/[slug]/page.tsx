@@ -10,8 +10,36 @@ import PageHeader from "@/components/PageHeader";
 import CategoryProductGrid from "@/components/CategoryProductGrid";
 import Footer from "@/components/Footer";
 
+import { Metadata } from "next";
+
 const API_BASE_URL = process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_URL || 'http://localhost:3001';
 const API_URL = `${API_BASE_URL}/api`;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+
+  if (productData[slug]) {
+    return {
+      title: productData[slug].name,
+      description: `Premium ${productData[slug].name} - Quality irrigation components from Vidhi Enterprises.`,
+    };
+  }
+
+  if (countryData[slug]) {
+    return {
+      title: `Irrigation Solutions in ${countryData[slug].title}`,
+      description: countryData[slug].metaDescription || countryData[slug].intro,
+    };
+  }
+
+  return {
+    title: slug.charAt(0).toUpperCase() + slug.slice(1),
+  };
+}
 
 interface Category {
   id: string;

@@ -4,7 +4,7 @@ import FeatureCards from "@/components/FeatureCards";
 import AboutSection from "@/components/AboutSection";
 import StatsSection from "@/components/StatsSection";
 import ProductGrid from "@/components/ProductGrid";
-import GlobalPresenceMap from "@/components/GlobalPresenceMap";
+import WorldMap from "@/components/WorldMap";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import YouTubeVideosSection from "@/components/YouTubeVideosSection";
@@ -253,7 +253,7 @@ export default function Home() {
         <p className="text-xl text-gray-600">Where You Can Find Us</p>
       </div>
 
-      <GlobalPresenceMap />
+      <WorldMap />
       <ContactForm />
       <Footer />
     </main>
