@@ -8,6 +8,7 @@ const products = [
   {
     title: "Drip Tubing",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-1.png",
+    subcategoryUrl: "/dripirri/drip-tubing",
     links: [
       { name: "Plain Lateral Polytubes", url: "/plain-lateral" },
       { name: "Cylindrical Dripline Emitting Pipe Inline Drip Tube PC & NON PC", url: "/cylindrical-dripline" },
@@ -17,6 +18,7 @@ const products = [
   {
     title: "Emitting Devices",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-2.png",
+    subcategoryUrl: "/dripirri/emitting-devices",
     links: [
       { name: "Online PC Dripper Emitters", url: "/onlinepc-dripper-emitter" },
       { name: "Online Emitters Dripper NPC TurboKey", url: "/online-emitters" },
@@ -35,6 +37,7 @@ const products = [
   {
     title: "Drip Fittings",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-3.png",
+    subcategoryUrl: "/dripirri/drip-fittings",
     links: [
       { name: "Drip Lateral Fittings", url: "/drip-lateral-fiiting" },
     ],
@@ -42,6 +45,7 @@ const products = [
   {
     title: "Filtration",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-4.png",
+    subcategoryUrl: "/dripirri/filtration",
     links: [
       { name: "Y-Type Filter", url: "/Y-Type-filter" },
       { name: "T-Type Filter", url: "/T-Type-filter" },
@@ -51,6 +55,7 @@ const products = [
   {
     title: "Fertigation Devices",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-5.png",
+    subcategoryUrl: "/dripirri/fertigation-devices",
     links: [
       { name: "Ventury Injector", url: "/ventury-injector" },
     ],
@@ -58,6 +63,7 @@ const products = [
   {
     title: "Control Valves & ACC",
     image: "https://d170mw2nhcb1v0.cloudfront.net/img/DI-6.png",
+    subcategoryUrl: "/dripirri/control-valves",
     links: [
       { name: "Air Release Valve", url: "/air-release" },
       { name: "Single Union Ball Valve", url: "/single-union" },
