@@ -17,7 +17,8 @@ const ShareButton: React.FC<ShareButtonProps> = ({ title, text, url }) => {
   const shareText = text || `Check out ${title}`;
 
   const handleNativeShare = async () => {
-    if (navigator.share) {
+    // Check if navigator.share and canShare are supported
+    if (navigator.share && navigator.canShare && navigator.canShare({ title, text: shareText, url: shareUrl })) {
       try {
         await navigator.share({
           title,
@@ -40,6 +41,19 @@ const ShareButton: React.FC<ShareButtonProps> = ({ title, text, url }) => {
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error('Failed to copy:', err);
+      // Fallback for older browsers
+      const textArea = document.createElement("textarea");
+      textArea.value = shareUrl;
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch (e) {
+        console.error('Fallback copy failed', e);
+      }
+      document.body.removeChild(textArea);
     }
   };
 
@@ -97,7 +111,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ title, text, url }) => {
   ];
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block z-10">
       <button
         onClick={handleNativeShare}
         className="inline-flex items-center gap-2 border-2 border-gray-300 text-gray-700 font-bold py-3 px-6 rounded-lg hover:border-primary hover:text-primary transition duration-300"
@@ -116,16 +130,18 @@ const ShareButton: React.FC<ShareButtonProps> = ({ title, text, url }) => {
             className="fixed inset-0 z-40" 
             onClick={() => setShowDropdown(false)}
           />
-          <div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border z-50 py-2">
+          <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-64 bg-white rounded-lg shadow-xl border z-50 py-2">
             {/* Copy Link */}
             <button
               onClick={handleCopyLink}
-              className="w-full flex items-center gap-3 px-4 py-2 text-left text-gray-700 hover:bg-gray-100 transition"
+              className="w-full flex items-center gap-3 px-4 py-3 text-left text-gray-700 hover:bg-gray-100 transition"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
               </svg>
-              {copied ? 'Copied!' : 'Copy Link'}
+              <div className="flex-1">
+                {copied ? <span className="text-green-600 font-bold">Link Copied!</span> : 'Copy Link'}
+              </div>
             </button>
 
             <div className="border-t my-1" />
@@ -142,7 +158,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ title, text, url }) => {
                   setShowDropdown(false);
                   window.open(link.href, '_blank', 'noopener,noreferrer');
                 }}
-                className={`flex items-center gap-3 px-4 py-2 text-gray-700 transition ${link.color}`}
+                className={`flex items-center gap-3 px-4 py-3 text-gray-700 transition ${link.color}`}
               >
                 {link.icon}
                 {link.name}

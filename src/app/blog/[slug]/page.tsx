@@ -187,7 +187,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <div className="mt-12 text-center">
           <Link 
             href="/blog" 
-            className="inline-flex items-center gap-2 bg-success text-white px-8 py-3 rounded-full font-bold hover:bg-[#145a32] transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 bg-success text-white px-8 text-green-900 py-3 rounded-full font-bold hover:bg-[#145a32] transition-all duration-300 shadow-lg hover:shadow-xl hover:text-white"
           >
             <i className="fa fa-arrow-left"></i>
             Back to All Posts

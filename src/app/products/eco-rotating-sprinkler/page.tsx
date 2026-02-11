@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
+import ShareButton from "@/components/ShareButton";
 
 export default function EcoRotatingSprinkler() {
   const breadcrumbs = [
@@ -80,7 +81,7 @@ export default function EcoRotatingSprinkler() {
                 </div>
               </div>
 
-              <div className="pt-4 text-center lg:text-left">
+              <div className="pt-4 text-center lg:text-left flex flex-wrap gap-4 justify-center lg:justify-start items-center">
                 <a 
                   href="/pdf/AM pdf.pdf" 
                   target="_blank" 
@@ -88,6 +89,10 @@ export default function EcoRotatingSprinkler() {
                 >
                   <i className="fa fa-file-pdf mr-3"></i> View PDF
                 </a>
+                <ShareButton 
+                  title="Eco Rotating Sprinkler" 
+                  text="Check out Eco Rotating Sprinkler from GoGreen. Designed for smooth, reliable performance in all irrigation conditions." 
+                />
               </div>
             </div>
           </div>
