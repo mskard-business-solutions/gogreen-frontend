@@ -76,7 +76,7 @@ const FounderVisionPage = () => {
             <div className="relative w-64 h-64 lg:w-80 lg:h-80 shrink-0 animate-float">
               <div className="absolute inset-0 border-4 border-white/20 rounded-full scale-110"></div>
               <Image
-                src="https://d170mw2nhcb1v0.cloudfront.net/img/7.jpg"
+                src="https://d170mw2nhcb1v0.cloudfront.net/img/canva2.png"
                 alt="Founder"
                 fill
                 className="object-cover rounded-full border-4 border-white shadow-2xl"
