@@ -162,8 +162,8 @@ export default async function RootLayout({
           rel="stylesheet" 
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
         />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png" sizes="any" />
+        <link rel="apple-touch-icon" href="https://d170mw2nhcb1v0.cloudfront.net/img/vidhi_logo.png" />
         <meta name="theme-color" content="#0f4c81" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
