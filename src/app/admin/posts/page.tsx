@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axiosInstance from '@/lib/axios';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -20,6 +20,7 @@ export default function AdminPostsPage() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [deletingId, setDeletingId] = useState<number | null>(null);
 
   useEffect(() => {
     fetchPosts();
@@ -27,13 +28,31 @@ export default function AdminPostsPage() {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get('/api/admin/posts');
+      const res = await axiosInstance.get('/posts');
       setPosts(res.data);
     } catch (err) {
       setError('Failed to load posts');
       console.error(err);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleDelete = async (id: number) => {
+    if (!window.confirm('Are you sure you want to delete this post? This action cannot be undone.')) {
+      return;
+    }
+
+    setDeletingId(id);
+    try {
+      await axiosInstance.delete(`/posts/${id}`);
+      // Remove post from state to avoid refetch
+      setPosts(posts.filter(post => post.id !== id));
+    } catch (err) {
+      console.error('Failed to delete post:', err);
+      alert('Failed to delete post. Please try again.');
+    } finally {
+      setDeletingId(null);
     }
   };
 
@@ -139,10 +158,17 @@ export default function AdminPostsPage() {
                     </Link>
                     <Link
                       href={`/admin/posts/${post.slug}/edit`}
-                      className="text-indigo-600 hover:text-indigo-900"
+                      className="text-indigo-600 hover:text-indigo-900 mr-4"
                     >
                       Edit
                     </Link>
+                    <button
+                      onClick={() => handleDelete(post.id)}
+                      disabled={deletingId === post.id}
+                      className={`text-red-600 hover:text-red-900 ${deletingId === post.id ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    >
+                      {deletingId === post.id ? 'Deleting...' : 'Delete'}
+                    </button>
                   </td>
                 </tr>
               ))}
